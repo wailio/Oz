@@ -15,7 +15,7 @@ export default function AllProductsPage() {
     <div>
       <LuxuryHeader />
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-28 md:pt-36">
+      <main className="min-h-screen bg-[#050b14] text-[#f4efe6] pt-28 md:pt-36">
         <section className="pb-20 md:pb-32">
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             {/* Hero Section */}

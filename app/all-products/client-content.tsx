@@ -175,7 +175,7 @@ export default function AllProductsClientContent() {
       {/* Category Filters */}
       <Reveal delay={200}>
       <div className="mb-10 md:mb-14">
-        <div className="flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-white rounded-xl border border-gray-200 shadow-sm justify-center">
+        <div className="flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-[#0b1728] rounded-xl border border-[#1d3857] shadow-[0_18px_50px_rgba(0,0,0,0.25)] justify-center">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -201,16 +201,16 @@ export default function AllProductsClientContent() {
       {/* Products Grid */}
       {filteredProducts.length > 0 ? (
         <div>
-          <h2 className="text-base md:text-xl font-serif font-bold text-gray-900 mb-6 text-center">
+          <h2 className="text-base md:text-xl font-serif font-bold text-[#f4efe6] mb-6 text-center">
             {selectedCategory === "all" ? "Tous les Produits" : categories.find(c => c.id === selectedCategory)?.name}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {filteredProducts.map((product, i) => (
             <Reveal key={`${selectedCategory}-${product.id}`} variant="pop" immediate={isDesktop && i < 4} delay={Math.min(i * 60, 300)}>
             <Link href={`/product/${product.id}`}>
-              <div className="group h-full bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden hover:border-[#8b7344] cursor-pointer flex flex-col">
+              <div className="group h-full bg-[#0b1728] rounded-xl border border-[#1d3857] shadow-[0_18px_50px_rgba(0,0,0,0.25)] hover:shadow-lg transition-all duration-300 overflow-hidden hover:border-[#8b7344] cursor-pointer flex flex-col">
                 {/* Image */}
-                <div className="relative aspect-square w-full bg-white overflow-hidden rounded-t-xl">
+                <div className="relative aspect-square w-full bg-[#0b1728] overflow-hidden rounded-t-xl">
                   <img
                     src={product.images[0]}
                     alt={product.name}
@@ -220,10 +220,10 @@ export default function AllProductsClientContent() {
 
                 {/* Content */}
                 <div className="p-2 md:p-3 lg:p-4 flex-1 flex flex-col justify-between">
-                  <h3 className="text-[11px] md:text-sm lg:text-base font-serif font-bold text-gray-900 mb-1 group-hover:text-[#a98661] transition-colors line-clamp-2">
+                  <h3 className="text-[11px] md:text-sm lg:text-base font-serif font-bold text-[#f4efe6] mb-1 group-hover:text-[#a98661] transition-colors line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="text-[8px] md:text-xs text-gray-600 leading-4 mb-2 h-8 overflow-hidden line-clamp-2 hidden md:block">
+                  <p className="text-[8px] md:text-xs text-[#a9b6c5] leading-4 mb-2 h-8 overflow-hidden line-clamp-2 hidden md:block">
                     {product.description}
                   </p>
                   <div className="flex justify-between items-center gap-1">
@@ -243,7 +243,7 @@ export default function AllProductsClientContent() {
         </div>
       ) : (
         <div className="text-center py-12">
-          <p className="text-gray-600 text-lg">No products found in this category</p>
+          <p className="text-[#a9b6c5] text-lg">No products found in this category</p>
         </div>
       )}
     </div>

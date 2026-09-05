@@ -2,13 +2,13 @@
 @import "tw-animate-css";
 
 :root {
-  --background: #1E1912;
+  --background: #050b14;
   --foreground: #f5f2ea;
 }
 
 html,
 body {
-  background: #1E1912;
+  background: #050b14;
 }
 
 /* Arabic typography without changing physical layout direction or flex/grid order. */
@@ -88,13 +88,13 @@ body[data-locale="ar"] button {
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #1E1912;
+  --background: #050b14;
   --foreground: #f5f2ea;
 }
 
 html,
 body {
-  background: #1E1912;
+  background: #050b14;
 }
 
 @keyframes slideInUp {

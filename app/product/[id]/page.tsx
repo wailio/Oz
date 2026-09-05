@@ -12,7 +12,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       <LuxuryHeader />
       <Header />
 
-      <main className="bg-white">
+      <main className="bg-[#050b14] text-[#f4efe6]">
         <Suspense fallback={<div className="py-12 text-center">Chargement...</div>}>
           <ProductDetailContent productId={id} />
         </Suspense>
