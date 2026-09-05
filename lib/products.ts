@@ -611,6 +611,28 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 34,
+    name: "Table salle à manger HAVANA",
+    price: "67,990 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2-NuypDfLSUwfUpCqJMDSSnGmqzDzkNF.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3-dNW8Zl7XEcUg2cElsJ9aQdWGxBOOps.jpg",
+    ],
+    description: "Ensemble salle à manger HAVANA en finition marron, avec table ronde et chaises en cannage pour un intérieur chaleureux et élégant.",
+    dimension: "1m60",
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+        ],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {
