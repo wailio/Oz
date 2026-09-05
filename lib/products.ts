@@ -411,7 +411,7 @@ export const allProducts: Product[] = [
     colors: [
       {
         name: "Marron",
-        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-kXTf0ZJntC10a9wHG8mCCgeDSn1FhY.png",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a.JPG-ABNYFIcg0RLIn2CIhQjNQtn7bT4kR5.jpeg",
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b..JPG-krlPFUG3lbcwfqFyhadetmV7mCjXHe.jpeg",
@@ -589,8 +589,8 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Ivoire / Nature",
-        swatch: "/products/pr1.jpg",
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: ["/products/pr1.jpg", "/products/pr11.jpg"],
       },
     ],
