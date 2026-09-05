@@ -579,26 +579,6 @@ export const allProducts: Product[] = [
       },
     ],
   },
-  {
-    id: 32,
-    name: "Table salle à manger ÉCLAT Ivoire",
-    price: "69,990 DZD",
-    images: ["/products/table-ivoire-01.jpg", "/products/table-ivoire-02.jpg"],
-    description: "Table ronde en finition ivoire naturelle, accompagnée de fauteuils enveloppants pour une salle à manger lumineuse et chaleureuse.",
-    dimension: "1m40",
-    category: "salle-a-manger",
-    colors: [{ name: "Ivoire / Nature", swatch: "/products/table-ivoire-01.jpg", images: ["/products/table-ivoire-01.jpg", "/products/table-ivoire-02.jpg"] }],
-  },
-  {
-    id: 33,
-    name: "Table salle à manger NOCTURNE",
-    price: "74,990 DZD",
-    images: ["/products/table-brown-01.jpg", "/products/table-brown-02.jpg", "/products/table-brown-03.jpg"],
-    description: "Ensemble de salle à manger en bois brun profond, pensé pour créer une atmosphère sophistiquée et accueillante.",
-    dimension: "1m80",
-    category: "salle-a-manger",
-    colors: [{ name: "Marron", swatch: "/products/table-brown-01.jpg", images: ["/products/table-brown-01.jpg", "/products/table-brown-02.jpg", "/products/table-brown-03.jpg"] }],
-  },
 ]
 
 export function getProduct(productId: string | number) {
