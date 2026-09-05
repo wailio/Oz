@@ -667,7 +667,7 @@ export const allProducts: Product[] = [
     price: "118,900 DZD",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-13ASkOTK2Kthyiq0uEDpAbgwNR4apj.jpg",
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
     ],
     description: "Canapé NUAGE en tissu ivoire naturel, avec une assise généreuse et des lignes douces pour un salon élégant et accueillant.",
@@ -679,7 +679,7 @@ export const allProducts: Product[] = [
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blanc.ivoire.nature-WXorZQMKOtdOrp0lFyEDGifMGSOI8w.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
-          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-13ASkOTK2Kthyiq0uEDpAbgwNR4apj.jpg",
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
         ],
       },
