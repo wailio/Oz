@@ -629,6 +629,8 @@ export const allProducts: Product[] = [
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2-NuypDfLSUwfUpCqJMDSSnGmqzDzkNF.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3-dNW8Zl7XEcUg2cElsJ9aQdWGxBOOps.jpg",
         ],
       },
     ],
