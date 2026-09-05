@@ -103,7 +103,7 @@ export default function LuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="/logo-oz-meuble.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-xykBSeJVUyPa2G8RpTo71Dl6lI2D0k.png"
                 alt="Oz meuble"
                 width={140}
                 height={60}
