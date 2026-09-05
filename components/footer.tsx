@@ -139,6 +139,11 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
+            <div className="mt-5 space-y-1 text-xs leading-5 text-[#5c5d5a] lg:text-[13px]">
+              <a href="tel:+213553204043" className="block transition-colors hover:text-[#a98661]">0553 20 40 43</a>
+              <p>Birkhadem, Algérie</p>
+              <p>Ouvert tous les jours, 10:00–20:00</p>
+            </div>
             <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
             <div className="mt-6 flex gap-4 text-[#a98661]">

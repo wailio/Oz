@@ -17,14 +17,14 @@ const contactDetails = [
 
 export default function ContactContent() {
   const searchParams = useSearchParams()
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
+  const [formData, setFormData] = useState({ name: "", phone: "", subject: "", message: "" })
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
   const [productSpotlight, setProductSpotlight] = useState(false)
   const [whatsappUrl, setWhatsappUrl] = useState("")
   const [isWhatsappModalOpen, setIsWhatsappModalOpen] = useState(false)
   const [isQrCodeFailed, setIsQrCodeFailed] = useState(false)
   const [invalidFields, setInvalidFields] = useState<string[]>([])
-  const formReset = { name: "", email: "", phone: "", subject: "", message: "" }
+  const formReset = { name: "", phone: "", subject: "", message: "" }
   const messageRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
@@ -77,8 +77,8 @@ export default function ContactContent() {
     setStatus("sending")
     setInvalidFields([])
 
-    const { name: nom, email, phone: telephone, subject: sujet, message } = formData
-    const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nEmail: ${email}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
+    const { name: nom, phone: telephone, subject: sujet, message } = formData
+    const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
     const nextWhatsappUrl = `https://wa.me/213553204043?text=${encodeURIComponent(whatsappMessage)}`
     setWhatsappUrl(nextWhatsappUrl)
     setIsQrCodeFailed(false)
@@ -146,7 +146,6 @@ export default function ContactContent() {
           <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4" id="contact-form">
             <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <Reveal variant="pop" delay={0}><div><label className="sr-only" htmlFor="name">Nom</label><input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Nom" className={`contact-field w-full rounded-full px-4 py-3.5 ${invalidFields.includes("name") ? "border-red-400" : ""}`} /></div></Reveal>
-            <Reveal variant="pop" delay={70}><div><label className="sr-only" htmlFor="email">Email</label><input id="email" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={140}><div><label className="sr-only" htmlFor="phone">Téléphone</label><input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Téléphone" className={`contact-field w-full rounded-full px-4 py-3.5 ${invalidFields.includes("phone") ? "border-red-400" : ""}`} /></div></Reveal>
             <Reveal variant="pop" delay={210}><div><label className="sr-only" htmlFor="subject">Sujet</label><input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Sujet" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={280}>
