@@ -579,6 +579,38 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 32,
+    name: "Table salle à manger ÉCLAT",
+    price: "69,990 DZD",
+    images: ["/products/pr1.jpg", "/products/pr11.jpg"],
+    description: "Table salle à manger ÉCLAT en finition Ivoire / Nature, pensée pour une salle à manger lumineuse, chaleureuse et contemporaine.",
+    dimension: "1m60",
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Ivoire / Nature",
+        swatch: "/products/pr1.jpg",
+        images: ["/products/pr1.jpg", "/products/pr11.jpg"],
+      },
+    ],
+  },
+  {
+    id: 33,
+    name: "Table salle à manger NOCTURNE",
+    price: "74,990 DZD",
+    images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
+    description: "Table salle à manger NOCTURNE en finition marron, avec une présence sculpturale et des lignes élégantes pour recevoir avec style.",
+    dimension: "1m80",
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "/products/pr2.jpg",
+        images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {
