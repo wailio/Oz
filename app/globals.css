@@ -359,7 +359,7 @@ body {
     min-height: 3rem;
     border: 1px solid oklch(0.68 0.08 80 / 0.65);
     border-radius: 9999px;
-    background: transparent;
+    background: color-mix(in srgb, #8fb4d8 12%, transparent);
     color: var(--foreground);
     font-size: 0.875rem;
     outline: none;
@@ -439,6 +439,46 @@ body {
     .product-message-spotlight .product-message-streak { animation: none; opacity: 0.45; }
   }
 }
+
+/* Full-site dark visual system. These overrides keep legacy page utilities cohesive with the contact page. */
+:root {
+  --background: #1e1912;
+  --foreground: #f5f2ea;
+  --card: #282119;
+  --card-foreground: #f5f2ea;
+  --popover: #282119;
+  --popover-foreground: #f5f2ea;
+  --primary: #8fb4d8;
+  --primary-foreground: #1e1912;
+  --secondary: #332a20;
+  --secondary-foreground: #f5f2ea;
+  --muted: #332a20;
+  --muted-foreground: #b8b2a8;
+  --accent: #8fb4d8;
+  --accent-foreground: #1e1912;
+  --border: #55483a;
+  --input: #40352a;
+  --ring: #8fb4d8;
+  --sidebar: #241d16;
+  --sidebar-foreground: #f5f2ea;
+  --sidebar-border: #55483a;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Legacy light utility classes are remapped so every route remains dark. */
+:where([class~="bg-white"]) { background-color: var(--card) !important; }
+:where([class~="bg-white/80"]) { background-color: color-mix(in srgb, var(--card) 88%, transparent) !important; }
+:where([class~="bg-gray-50"], [class~="bg-gray-100"], [class~="bg-gray-200"]) { background-color: var(--secondary) !important; }
+:where([class~="text-gray-900"], [class~="text-gray-800"], [class~="text-black"]) { color: var(--foreground) !important; }
+:where([class~="text-gray-700"], [class~="text-gray-600"], [class~="text-gray-500"], [class~="text-gray-400"]) { color: var(--muted-foreground) !important; }
+:where([class~="border-gray-200"], [class~="border-gray-300"]) { border-color: var(--border) !important; }
+:where([class~="hover\\:bg-white"]:hover) { background-color: var(--primary) !important; color: var(--primary-foreground) !important; }
+:where([class~="hover\\:bg-gray-100"]:hover) { background-color: var(--secondary) !important; }
 
 @layer base {
   * {
