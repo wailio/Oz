@@ -396,7 +396,7 @@ body {
     width: 2px;
     pointer-events: none;
     opacity: 0;
-    background: linear-gradient(to bottom, transparent, #123e68 30%, #123e68 70%, transparent);
+    background: linear-gradient(to bottom, transparent, #6f91b3 30%, #6f91b3 70%, transparent);
   }
 
   .product-message-streak-left { left: -7px; }

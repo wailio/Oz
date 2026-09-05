@@ -118,11 +118,11 @@ export default function ContactContent() {
           </div>
         </Reveal>
 
-        <div className="flex flex-wrap justify-center gap-3 border-y border-[#0b2a4a]/20 py-4 md:grid md:grid-cols-4 md:gap-0 md:border-y">
+        <div className="flex flex-wrap justify-center gap-3 border-y border-[#6f91b3]/45 py-4 md:grid md:grid-cols-4 md:gap-0 md:border-y">
           {contactDetails.map(({ icon: Icon, label, value }, index) => (
             <Reveal key={label} variant="pop" delay={index * 80}>
-            <div className="flex flex-col items-center md:border-r md:border-[#0b2a4a]/20 md:px-5 md:py-8 md:py-6 md:text-center">
-              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#0b2a4a] text-[#6f91b3] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
+            <div className="flex flex-col items-center md:border-r md:border-[#6f91b3]/45 md:px-5 md:py-8 md:py-6 md:text-center">
+              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#8fb4d8] text-[#8fb4d8] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
               <p className="text-xs font-semibold text-white md:text-sm">{value}</p>
               <p className="mt-0.5 text-[10px] leading-3 text-[#aaa59d] md:mt-2 md:text-xs md:leading-5">{label}</p>
             </div>
@@ -136,7 +136,7 @@ export default function ContactContent() {
             <p className="font-serif text-2xl leading-none text-[#6f91b3]/70 md:text-6xl">Form</p>
             <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <div className="mt-6 border-l border-[#0b2a4a] pl-3 text-xs leading-4 text-[#8fb4d8] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+            <div className="mt-6 border-l border-[#8fb4d8] pl-3 text-xs leading-4 text-[#8fb4d8] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
           </Reveal>
           <Reveal className="md:hidden mb-2 text-center">
@@ -176,7 +176,7 @@ export default function ContactContent() {
           </form>
         </div>
 
-        <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#0b2a4a]/30 md:mt-16 md:mb-12">
+        <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#6f91b3]/45 md:mt-16 md:mb-12">
           <MapReveal src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.8154402813816!2d3.0383021793457026!3d36.72699350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003e85b45b%3A0x8a15d318fb0b3f72!2sOz%20meubles!5e0!3m2!1sfr!2sdz!4v1788624522482!5m2!1sfr!2sdz" title="Oz meuble à Birkhadem" />
         </div>
       </section>
