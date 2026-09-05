@@ -357,7 +357,7 @@ body {
   .contact-field {
     width: 100%;
     min-height: 3rem;
-    border: 1px solid #8fb4d8;
+    border: 1px solid oklch(0.68 0.08 80 / 0.65);
     border-radius: 9999px;
     background: transparent;
     color: var(--foreground);
@@ -371,8 +371,8 @@ body {
   }
 
   .contact-field:focus {
-    border-color: #b8d5f0;
-    background: color-mix(in srgb, #8fb4d8 12%, transparent);
+    border-color: oklch(0.78 0.1 80);
+    background: oklch(0.68 0.08 80 / 0.06);
   }
 
   textarea.contact-field {
@@ -408,10 +408,10 @@ body {
 
   @keyframes productMessageGlow {
     0% { box-shadow: none; }
-    17% { box-shadow: 0 0 0 1px rgba(143,180,216,0.55), 0 0 20px 4px rgba(143,180,216,0.32), 0 0 40px 10px rgba(143,180,216,0.14); }
-    58% { box-shadow: 0 0 0 1px rgba(143,180,216,0.55), 0 0 24px 5px rgba(143,180,216,0.38), 0 0 46px 12px rgba(18,62,104,0.13); }
-    78% { box-shadow: 0 0 0 1px rgba(143,180,216,0.55), 0 0 14px 3px rgba(143,180,216,0.22), 0 0 28px 7px rgba(143,180,216,0.1); }
-    100% { box-shadow: 0 0 12px 2px rgba(143,180,216,0.18); }
+    17% { box-shadow: 0 0 0 1px rgba(18,62,104,0.4), 0 0 20px 4px rgba(18,62,104,0.25), 0 0 40px 10px rgba(18,62,104,0.1); }
+    58% { box-shadow: 0 0 0 1px rgba(18,62,104,0.4), 0 0 24px 5px rgba(18,62,104,0.3), 0 0 46px 12px rgba(18,62,104,0.13); }
+    78% { box-shadow: 0 0 0 1px rgba(18,62,104,0.4), 0 0 14px 3px rgba(18,62,104,0.18), 0 0 28px 7px rgba(18,62,104,0.08); }
+    100% { box-shadow: 0 0 12px 2px rgba(18,62,104,0.15); }
   }
 
   @keyframes productMessageStreak {
@@ -435,7 +435,7 @@ body {
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .product-message-spotlight .contact-field { animation: none; box-shadow: 0 0 12px 2px rgba(143,180,216,0.18); }
+    .product-message-spotlight .contact-field { animation: none; box-shadow: 0 0 12px 2px rgba(18,62,104,0.15); }
     .product-message-spotlight .product-message-streak { animation: none; opacity: 0.45; }
   }
 }
