@@ -3,7 +3,7 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { Clock3, MapPin, Phone, X } from "lucide-react"
+import { Clock3, Mail, MapPin, Phone, X } from "lucide-react"
 import { QRCodeSVG } from "qrcode.react"
 import { MapReveal } from "@/components/MapReveal"
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,7 @@ import { Reveal } from "@/components/Reveal"
 
 const contactDetails = [
   { icon: Phone, label: "Téléphone", value: "0553 20 40 43" },
+  { icon: Mail, label: "Email", value: "naouihakim044@gmail.com" },
   { icon: MapPin, label: "Adresse", value: "Birkhadem, Algérie" },
   { icon: Clock3, label: "Horaires", value: "10:00 — 20:00" },
 ]

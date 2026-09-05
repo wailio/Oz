@@ -141,6 +141,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             </nav>
             <div className="mt-5 space-y-1 text-xs leading-5 text-[#5c5d5a] lg:text-[13px]">
               <a href="tel:+213553204043" className="block transition-colors hover:text-[#a98661]">0553 20 40 43</a>
+              <a href="mailto:naouihakim044@gmail.com" className="block break-all transition-colors hover:text-[#a98661]">naouihakim044@gmail.com</a>
               <p>Birkhadem, Algérie</p>
               <p>Ouvert tous les jours, 10:00–20:00</p>
             </div>
