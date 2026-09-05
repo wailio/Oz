@@ -30,7 +30,7 @@ export default function HomepageLuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-xykBSeJVUyPa2G8RpTo71Dl6lI2D0k.png"
+                src="/logo-oz-meuble-luxury.png"
                 alt="Oz meuble"
                 width={400}
                 height={120}
