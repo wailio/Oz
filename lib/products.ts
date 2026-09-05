@@ -635,6 +635,142 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 35,
+    name: "Ensemble salle à manger LUMIÈRE",
+    price: "63,490 DZD",
+    originalPrice: "74,990 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1.-7jD4AOSIKzh4KkuMZJhEriaSTz02jQ.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2.-5sd3rL2Vs4MaCH7sznKCSohT1zcf2U.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3.-3gqRbYQ41FYd1fvbHUYS7WPieCcUSi.jpg",
+    ],
+    description: "Ensemble salle à manger LUMIÈRE en finition blanc, avec table ronde et quatre chaises confortables pour une pièce lumineuse et conviviale.",
+    dimension: "1m40",
+    discount: 15,
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Blanc",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_05_48-KwSR6LtnukIdlq1ZN83PeUTzdW2bgE.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1.-7jD4AOSIKzh4KkuMZJhEriaSTz02jQ.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2.-5sd3rL2Vs4MaCH7sznKCSohT1zcf2U.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3.-3gqRbYQ41FYd1fvbHUYS7WPieCcUSi.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 36,
+    name: "Canapé NUAGE",
+    price: "118,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-13ASkOTK2Kthyiq0uEDpAbgwNR4apj.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
+    ],
+    description: "Canapé NUAGE en tissu ivoire naturel, avec une assise généreuse et des lignes douces pour un salon élégant et accueillant.",
+    dimension: "3m20",
+    category: "sofas",
+    colors: [
+      {
+        name: "Blanc ivoire / nature",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blanc.ivoire.nature-WXorZQMKOtdOrp0lFyEDGifMGSOI8w.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-13ASkOTK2Kthyiq0uEDpAbgwNR4apj.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 37,
+    name: "Salon MODENA",
+    price: "124,500 DZD",
+    originalPrice: "139,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.a-RcA5IV7nslCPOzThaYMbkqeatHUpYH.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+    ],
+    description: "Salon MODENA en coloris blanc ivoire / nature, pensé pour créer une atmosphère chaleureuse avec ses volumes enveloppants et son confort profond.",
+    dimension: "3m60",
+    discount: 11,
+    category: "sofas",
+    colors: [
+      {
+        name: "Blanc ivoire / nature",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blanc.ivoire.nature-WXorZQMKOtdOrp0lFyEDGifMGSOI8w.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.a-RcA5IV7nslCPOzThaYMbkqeatHUpYH.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 38,
+    name: "Armoire CANOPÉE",
+    price: "58,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/689263451_18155070256461991_6502792337098745532_n-vCRlnDP6Hkm8eODpYp0zjQD1K3w4dw.jpg",
+    ],
+    description: "Armoire CANOPÉE en finition marron, avec façades en cannage naturel et poignées discrètes pour un rangement élégant.",
+    dimension: "1m20",
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/689263451_18155070256461991_6502792337098745532_n-vCRlnDP6Hkm8eODpYp0zjQD1K3w4dw.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 39,
+    name: "Armoire RIVOLI",
+    price: "64,750 DZD",
+    originalPrice: "72,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686289576_18155070208461991_4416137747890154382_n-7mplXZnVYQdSjfJpkpo8WWVHnAnAcY.jpg",
+    ],
+    description: "Armoire RIVOLI en bois marron foncé, sublimée par un cannage graphique et une silhouette compacte adaptée aux intérieurs raffinés.",
+    dimension: "1m10",
+    discount: 11,
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686289576_18155070208461991_4416137747890154382_n-7mplXZnVYQdSjfJpkpo8WWVHnAnAcY.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 40,
+    name: "Commode ÉCLOSION",
+    price: "51,300 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686419824_18155070265461991_2788758347228807228_n-Ll0ZYz4ZIY8szaaQCGIQIM1gFYntwp.jpg",
+    ],
+    description: "Commode ÉCLOSION en teinte marron chaleureuse, avec trois tiroirs cannés pour organiser vos essentiels avec style.",
+    dimension: "0m80",
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686419824_18155070265461991_2788758347228807228_n-Ll0ZYz4ZIY8szaaQCGIQIM1gFYntwp.jpg",
+        ],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {

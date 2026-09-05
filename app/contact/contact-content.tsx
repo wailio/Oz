@@ -113,7 +113,7 @@ export default function ContactContent() {
       <section className="mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-20">
         <Reveal delay={120}>
           <div className="mb-6 text-center md:mb-12">
-            <p className="font-serif text-2xl leading-none text-[#0b2a4a]/35 md:text-7xl">Contact</p>
+            <p className="font-serif text-2xl leading-none text-[#6f91b3]/70 md:text-7xl">Contact</p>
             <h2 className="-mt-1 text-base font-bold tracking-tight text-white md:text-3xl">Informations de contact</h2>
           </div>
         </Reveal>
@@ -133,14 +133,14 @@ export default function ContactContent() {
         <div className="mt-8 grid gap-4 md:mt-16 md:gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-start md:gap-16">
           <Reveal>
           <div className="hidden pt-2 md:block">
-            <p className="font-serif text-2xl leading-none text-[#0b2a4a]/35 md:text-6xl">Form</p>
+            <p className="font-serif text-2xl leading-none text-[#6f91b3]/70 md:text-6xl">Form</p>
             <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <div className="mt-6 border-l border-[#0b2a4a] pl-3 text-xs leading-4 text-[#6f91b3] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+            <div className="mt-6 border-l border-[#0b2a4a] pl-3 text-xs leading-4 text-[#8fb4d8] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
           </Reveal>
           <Reveal className="md:hidden mb-2 text-center">
-            <p className="font-serif text-xl leading-none text-[#0b2a4a]/35">Form</p>
+            <p className="font-serif text-xl leading-none text-[#6f91b3]/70">Form</p>
             <h2 className="-mt-0.5 text-sm font-bold text-white">Parlons de votre projet</h2>
           </Reveal>
 
