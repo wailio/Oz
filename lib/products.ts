@@ -593,11 +593,6 @@ export const allProducts: Product[] = [
         swatch: "/products/pr1.jpg",
         images: ["/products/pr1.jpg", "/products/pr11.jpg"],
       },
-      {
-        name: "Marron",
-        swatch: "/products/pr2.jpg",
-        images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
-      },
     ],
   },
   {
@@ -613,11 +608,6 @@ export const allProducts: Product[] = [
         name: "Marron",
         swatch: "/products/pr2.jpg",
         images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
-      },
-      {
-        name: "Ivoire / Nature",
-        swatch: "/products/pr1.jpg",
-        images: ["/products/pr1.jpg", "/products/pr11.jpg"],
       },
     ],
   },
