@@ -103,7 +103,7 @@ export default function ContactContent() {
   return (
     <main className="min-h-screen bg-[#1b1b1b] text-[#f6f1e9]">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <img src="/contact-inspiration.jpg" alt="Salon Oz meuble avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%205%20sept.%202026%2C%2023_40_34-FB42McgzJXef34gaZjscdR4BOn6eZJ.png" alt="Salle à manger Oz meuble avec table ronde et chaises" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
         <div className="absolute inset-0 bg-[#111111]/70" />
         <Reveal delay={0}>
           <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
