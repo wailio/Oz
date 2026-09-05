@@ -227,7 +227,7 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-white md:bg-gray-50 rounded-none md:rounded-lg border border-gray-200 overflow-hidden hover:border-[#8b7344] hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
+      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-white md:bg-gray-50 rounded-none md:rounded-lg border border-gray-200 overflow-hidden hover:border-[#315b86] hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
           <div className="relative aspect-square w-full items-center justify-center overflow-hidden bg-white rounded-none md:rounded-t-lg md:aspect-[4/3]">
             {product.discount && <div className="absolute top-1.5 left-1.5 bg-red-600 text-white px-1.5 py-0.5 rounded text-[10px] font-bold z-10">-{product.discount}%</div>}
             <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
@@ -243,7 +243,7 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
             </div>
             <div className="pt-1.5 border-t border-gray-200 mt-1.5">
               <div className="flex justify-between items-center gap-1">
-                <span className="text-[8px] md:text-xs font-bold text-[#1E1912]">{product.price}</span>
+                <span className="text-[8px] md:text-xs font-bold text-[#e5edf5]">{product.price}</span>
                 {product.originalPrice && <span className="text-[7px] md:text-[8px] text-gray-400 line-through">{product.originalPrice}</span>}
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function Products() {
         {/* NOS PRODUITS Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#9bb9d8] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -340,7 +340,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#315b86] bg-[#315b86]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#234463] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -348,7 +348,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#315b86] bg-[#315b86]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#234463] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -375,7 +375,7 @@ export default function Products() {
         {/* Modèles Pr��ts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#9bb9d8] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -384,7 +384,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#315b86] bg-[#315b86]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#234463] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -392,7 +392,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#315b86] bg-[#315b86]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#234463] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>

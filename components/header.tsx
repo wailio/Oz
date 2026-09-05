@@ -74,21 +74,21 @@ export default function Header() {
             <div className="pb-2 border-b border-gray-300/50 flex flex-col gap-2">
               <Link
                 href="/rooms"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#a98661]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#315b86]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Sofa className="h-4 w-4" aria-hidden="true" /> PIÈCES</span>
               </Link>
               <Link
                 href="/inspirations"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#a98661]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#315b86]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Lightbulb className="h-4 w-4" aria-hidden="true" /> INSPIRATIONS</span>
               </Link>
               <Link
                 href="/offers"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#a98661]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#315b86]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Gift className="h-4 w-4" aria-hidden="true" /> OFFRES & PROMOTIONS</span>
@@ -98,21 +98,21 @@ export default function Header() {
             {/* Main nav items */}
             <Link
               href="/all-products"
-              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#a98661]`}
+              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#315b86]`}
               onClick={() => setIsOpen(false)}
             >
               Produits
             </Link>
             <Link
               href="/contact"
-              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#a98661]`}
+              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#315b86]`}
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
             <Link
               href="/about"
-              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#a98661]`}
+              className={`font-[var(--font-montserrat)] font-medium transition-colors py-2 text-sm text-white hover:text-[#315b86]`}
               onClick={() => setIsOpen(false)}
             >
               À Propos

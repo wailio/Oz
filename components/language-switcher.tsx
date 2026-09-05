@@ -24,7 +24,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
             aria-label={language.label}
             onClick={() => setLocale(language.id)}
             className={cn(
-              cn("flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]", compact ? "size-8" : "size-10"),
+              cn("flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6f97bd]", compact ? "size-8" : "size-10"),
               language.id === "fr" ? "order-first" : "order-last",
               isSelected ? "scale-110 opacity-100" : "scale-90 opacity-55 hover:scale-100 hover:opacity-90",
               textColor,

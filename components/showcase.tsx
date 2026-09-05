@@ -54,7 +54,7 @@ export default function Showcase() {
                 {/* Content Area */}
                 <div className="p-4 md:p-6 h-32 md:h-40 flex flex-col justify-between">
                   <div>
-                    <p className="text-[#a98661] text-sm md:text-base font-bold mb-2">{product.itemCount} Items</p>
+                    <p className="text-[#315b86] text-sm md:text-base font-bold mb-2">{product.itemCount} Items</p>
                     <h3 className="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-2">{product.title}</h3>
                     <p className="text-xs md:text-sm text-gray-600 mb-3">{product.description}</p>
                   </div>
@@ -93,7 +93,7 @@ export default function Showcase() {
                     />
                     <div className="text-left flex-1">
                       <h3 className="text-sm font-bold text-gray-900">{product.title}</h3>
-                      <p className="text-xs text-[#a98661] font-semibold">{product.itemCount} Items</p>
+                      <p className="text-xs text-[#315b86] font-semibold">{product.itemCount} Items</p>
                     </div>
                     <svg className="w-4 h-4 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -113,7 +113,7 @@ export default function Showcase() {
                     
                     {/* Content */}
                     <div className="p-3">
-                      <p className="text-[#a98661] text-xs font-bold mb-1">{product.itemCount} Items</p>
+                      <p className="text-[#315b86] text-xs font-bold mb-1">{product.itemCount} Items</p>
                       <h3 className="text-base font-serif font-bold text-gray-900 mb-1">{product.title}</h3>
                       <p className="text-xs text-gray-600 mb-2">{product.description}</p>
                       
@@ -127,7 +127,7 @@ export default function Showcase() {
                       {/* View Products Link */}
                       <Link
                         href={product.link}
-                        className="inline-block w-full bg-[#a98661] hover:bg-[#061632] text-white font-bold py-2 px-4 rounded transition-colors text-center text-xs"
+                        className="inline-block w-full bg-[#315b86] hover:bg-[#061632] text-white font-bold py-2 px-4 rounded transition-colors text-center text-xs"
                       >
                         View Products
                       </Link>
