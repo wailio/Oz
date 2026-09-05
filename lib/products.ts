@@ -798,7 +798,10 @@ export const allProducts: Product[] = [
     dimension: "Composition 2 tables",
     category: "accessories",
   },
-]
+].filter((product) => ![
+  1, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25,
+  26, 27, 28, 29, 30, 31,
+].includes(product.id)) as Product[]
 
 export function getProduct(productId: string | number) {
   return allProducts.find((product) => product.id === Number(productId))
