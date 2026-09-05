@@ -80,26 +80,11 @@ export default function ContactContent() {
 
     const { name: nom, email, phone: telephone, subject: sujet, message } = formData
     const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nEmail: ${email}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
-    const nextWhatsappUrl = `https://wa.me/2130550031052?text=${encodeURIComponent(whatsappMessage)}`
+    const nextWhatsappUrl = `https://wa.me/213553204043?text=${encodeURIComponent(whatsappMessage)}`
     setWhatsappUrl(nextWhatsappUrl)
     setIsQrCodeFailed(false)
 
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1)
-
-    const formElement = event.currentTarget
-    const sendEmail = async () => {
-      const emailData = new FormData(formElement)
-      emailData.append("access_key", "90d137ea-c261-4006-9d98-3bda64966d94")
-      emailData.append("subject", sujet || "Nouveau message depuis le site Mobenia")
-      emailData.append("from_name", nom)
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: emailData,
-      })
-      const result = await response.json()
-      if (!response.ok || !result.success) throw new Error(result.message || "Email submission failed")
-    }
 
     if (isMobile) {
       setFormData(formReset)
@@ -111,15 +96,8 @@ export default function ContactContent() {
     // Keep WhatsApp opening directly inside the submit gesture on desktop.
     const whatsappWindow = window.open(nextWhatsappUrl, "_blank")
     if (!whatsappWindow) setIsWhatsappModalOpen(true)
-
-    try {
-      await sendEmail()
-      setFormData(formReset)
-      setStatus("success")
-    } catch (error) {
-      console.error("[v0] Web3Forms submission failed:", error)
-      setStatus("error")
-    }
+    setFormData(formReset)
+    setStatus("success")
   }
 
   return (
@@ -195,7 +173,7 @@ export default function ContactContent() {
               <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#e8b843] px-8 py-3 text-xs font-medium text-[#282014] hover:bg-[#f0ca55]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
             </Reveal>
             {status === "success" && <p className="text-xs text-[#d2b979]" role="status">Message envoyé.</p>}
-            {status === "error" && <p className="text-xs text-red-300" role="alert">L&apos;envoi de l&apos;email a échoué. Veuillez réessayer.</p>}
+
           </form>
         </div>
 
