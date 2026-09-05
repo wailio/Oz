@@ -3,17 +3,16 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { Clock3, Mail, MapPin, Phone, X } from "lucide-react"
+import { Clock3, MapPin, Phone, X } from "lucide-react"
 import { QRCodeSVG } from "qrcode.react"
 import { MapReveal } from "@/components/MapReveal"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/Reveal"
 
 const contactDetails = [
-  { icon: Phone, label: "Téléphone", value: "+213 656 373 378" },
-  { icon: Mail, label: "Email", value: "mobenia23@gmail.com" },
-  { icon: MapPin, label: "Adresse", value: "Aïn Naâdja, Algérie" },
-  { icon: Clock3, label: "Horaires", value: "9:00 — 19:00" },
+  { icon: Phone, label: "Téléphone", value: "0553 20 40 43" },
+  { icon: MapPin, label: "Adresse", value: "Birkhadem, Algérie" },
+  { icon: Clock3, label: "Horaires", value: "10:00 — 20:00" },
 ]
 
 export default function ContactContent() {
@@ -103,7 +102,7 @@ export default function ContactContent() {
   return (
     <main className="min-h-screen bg-[#1b1b1b] text-[#f6f1e9]">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <img src="/contact-inspiration.jpg" alt="Salon Mobenia avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
+        <img src="/contact-inspiration.jpg" alt="Salon Oz meuble avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
         <div className="absolute inset-0 bg-[#111111]/70" />
         <Reveal delay={0}>
           <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
@@ -178,7 +177,7 @@ export default function ContactContent() {
         </div>
 
         <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#a89163]/30 md:mt-16 md:mb-12">
-          <MapReveal src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz" title="Mobenia Furniture location" />
+          <MapReveal src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.8154402813816!2d3.0383021793457026!3d36.72699350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003e85b45b%3A0x8a15d318fb0b3f72!2sOz%20meubles!5e0!3m2!1sfr!2sdz!4v1788624522482!5m2!1sfr!2sdz" title="Oz meuble à Birkhadem" />
         </div>
       </section>
 

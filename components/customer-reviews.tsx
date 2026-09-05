@@ -75,7 +75,7 @@ export default function CustomerReviews() {
                   <div className="pt-0.5"><p className="font-sans text-[10px] uppercase tracking-wide text-gray-500">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-serif text-3xl text-gray-900">Google</p></div>
                 </div>
                 <div className="mt-5 flex gap-2 border-b border-gray-100 pb-5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-5 w-5 fill-[#c98e34] text-[#c98e34]" aria-hidden="true" />)}</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#c89543] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c89543] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Oz+meuble+Birkhadem" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#c89543] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c89543] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>

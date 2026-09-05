@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
         <div className="mb-6 md:mb-16 text-center">
           <Reveal>
             <h2 className="text-xl font-serif font-semibold text-white md:text-[44px]">
-              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Mobenia</span>
+              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Oz meuble</span>
             </h2>
           </Reveal>
         </div>
