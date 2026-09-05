@@ -411,7 +411,7 @@ export const allProducts: Product[] = [
     colors: [
       {
         name: "Marron",
-        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-kXTf0ZJntC10a9wHG8mCCgeDSn1FhY.png",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a.JPG-ABNYFIcg0RLIn2CIhQjNQtn7bT4kR5.jpeg",
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b..JPG-krlPFUG3lbcwfqFyhadetmV7mCjXHe.jpeg",
@@ -589,8 +589,8 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Ivoire / Nature",
-        swatch: "/products/pr1.jpg",
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: ["/products/pr1.jpg", "/products/pr11.jpg"],
       },
     ],
@@ -606,8 +606,32 @@ export const allProducts: Product[] = [
     colors: [
       {
         name: "Marron",
-        swatch: "/products/pr2.jpg",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-9lHi3qs18YXZbiHKvMoLPW3lGZziWs.png",
         images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
+      },
+    ],
+  },
+  {
+    id: 34,
+    name: "Table salle à manger HAVANA",
+    price: "67,990 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2-NuypDfLSUwfUpCqJMDSSnGmqzDzkNF.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3-dNW8Zl7XEcUg2cElsJ9aQdWGxBOOps.jpg",
+    ],
+    description: "Ensemble salle à manger HAVANA en finition marron, avec table ronde et chaises en cannage pour un intérieur chaleureux et élégant.",
+    dimension: "1m60",
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2-NuypDfLSUwfUpCqJMDSSnGmqzDzkNF.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3-dNW8Zl7XEcUg2cElsJ9aQdWGxBOOps.jpg",
+        ],
       },
     ],
   },
