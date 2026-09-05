@@ -635,6 +635,32 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 35,
+    name: "Ensemble salle à manger LUMIÈRE",
+    price: "63,490 DZD",
+    originalPrice: "74,990 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1.-7jD4AOSIKzh4KkuMZJhEriaSTz02jQ.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2.-5sd3rL2Vs4MaCH7sznKCSohT1zcf2U.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3.-3gqRbYQ41FYd1fvbHUYS7WPieCcUSi.jpg",
+    ],
+    description: "Ensemble salle à manger LUMIÈRE en finition blanc, avec table ronde et quatre chaises confortables pour une pièce lumineuse et conviviale.",
+    dimension: "1m40",
+    discount: 15,
+    category: "salle-a-manger",
+    colors: [
+      {
+        name: "Blanc",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_05_48-KwSR6LtnukIdlq1ZN83PeUTzdW2bgE.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1.-7jD4AOSIKzh4KkuMZJhEriaSTz02jQ.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.2.-5sd3rL2Vs4MaCH7sznKCSohT1zcf2U.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.3.-3gqRbYQ41FYd1fvbHUYS7WPieCcUSi.jpg",
+        ],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {
