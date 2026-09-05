@@ -55,7 +55,7 @@ export default function CategoriesShowcase() {
                 <Link
                   key={cat.name}
                   href={`/all-products?category=${encodeURIComponent(cat.name.toLowerCase())}`}
-                  className="flex w-28 shrink-0 flex-col items-center gap-3 rounded-lg border border-[#315b86]/70 bg-[#4b3a24]/80 p-4 text-white transition-all hover:bg-[#5a452b]"
+                  className="flex w-28 shrink-0 flex-col items-center gap-3 rounded-lg border border-[#a98661]/70 bg-[#4b3a24]/80 p-4 text-white transition-all hover:bg-[#5a452b]"
                 >
                   <Icon className="size-8 stroke-[1.7] text-white" aria-hidden="true" />
                   <h3 className="text-xs font-medium text-white text-center">{cat.name}</h3>
@@ -71,7 +71,7 @@ export default function CategoriesShowcase() {
             href="https://maps.app.goo.gl/cjjvrBX2X2M2UMbv5"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-[#315b86] hover:bg-[#234463] text-white rounded-lg py-3 px-6 text-sm md:text-base font-semibold transition-colors"
+            className="flex items-center justify-center gap-2 bg-[#a98661] hover:bg-[#8f6f4d] text-white rounded-lg py-3 px-6 text-sm md:text-base font-semibold transition-colors"
           >
             <MapPin size={18} />
             Avis Google

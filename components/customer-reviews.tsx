@@ -64,18 +64,18 @@ export default function CustomerReviews() {
             <h2 className="pt-4 text-center text-2xl font-serif font-bold text-gray-900 md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
             <div className="hidden w-full items-center gap-12 md:flex" aria-label="Laisser un avis Google">
               <div className="relative flex min-w-0 flex-1 flex-col justify-center pb-8 pl-4 lg:pl-10">
-                <p className="mb-6 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#6f97bd]">AVIS CLIENTS</p>
+                <p className="mb-6 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#bd8b3d]">AVIS CLIENTS</p>
                 <h2 className="max-w-[520px] font-serif text-4xl font-normal leading-[1.08] text-gray-900 lg:text-5xl">
                   Votre avis<br />compte pour nous.
                 </h2>
               </div>
-              <div className="relative shrink-0 rounded-[14px] border border-[#6f97bd] bg-white p-4 shadow-[0_12px_24px_rgba(90,64,25,0.1)] lg:w-[430px] lg:p-5">
+              <div className="relative shrink-0 rounded-[14px] border border-[#c9964b] bg-white p-4 shadow-[0_12px_24px_rgba(90,64,25,0.1)] lg:w-[430px] lg:p-5">
                 <div className="flex items-start gap-4">
                   <img src="/google-logo.png" alt="Google" className="h-12 w-12 object-contain" />
                   <div className="pt-0.5"><p className="font-sans text-[10px] uppercase tracking-wide text-gray-500">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-serif text-3xl text-gray-900">Google</p></div>
                 </div>
-                <div className="mt-5 flex gap-2 border-b border-gray-100 pb-5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-5 w-5 fill-[#8fb4d8] text-[#8fb4d8]" aria-hidden="true" />)}</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Oz+meuble+Birkhadem" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#315b86] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#315b86] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
+                <div className="mt-5 flex gap-2 border-b border-gray-100 pb-5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-5 w-5 fill-[#c98e34] text-[#c98e34]" aria-hidden="true" />)}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Oz+meuble+Birkhadem" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#c89543] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c89543] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function CustomerReviews() {
                 <img src={review.image} alt={`Avis de ${review.author}`} className="mb-4 h-auto w-full rounded-md border border-gray-200 object-contain" />
                 <div className="flex gap-1 mb-3 justify-start">
                   {[...Array(review.rating)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-blue-300 text-blue-300" />
+                    <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
                 <p className="text-gray-700 font-medium text-sm mb-3 leading-relaxed">
@@ -114,7 +114,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('left')}
             aria-label="Avis précédents"
-            className="absolute left-0 top-1/2 z-10 -translate-x-16 -translate-y-1/2 rounded-full bg-[#315b86] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#315b86] focus-visible:ring-offset-2 group-hover:opacity-100"
+            className="absolute left-0 top-1/2 z-10 -translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -125,7 +125,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('right')}
             aria-label="Avis suivants"
-            className="absolute right-0 top-1/2 z-10 translate-x-16 -translate-y-1/2 rounded-full bg-[#315b86] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#315b86] focus-visible:ring-offset-2 group-hover:opacity-100"
+            className="absolute right-0 top-1/2 z-10 translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -141,7 +141,7 @@ export default function CustomerReviews() {
             </div>
             <div className="flex gap-1 mb-3 justify-start">
               {[...Array(reviews[currentIndex].rating)].map((_, j) => (
-                <Star key={j} className="w-4 h-4 fill-blue-300 text-blue-300" />
+                <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
             <p className="text-xs font-semibold text-gray-900 text-left">{reviews[currentIndex].author}</p>
@@ -155,7 +155,7 @@ export default function CustomerReviews() {
           <div className="flex justify-between items-center gap-3">
             <button
               onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
-              className="p-2 rounded-lg bg-[#315b86] hover:bg-[#061632] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -166,14 +166,14 @@ export default function CustomerReviews() {
                 <div
                   key={i}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    i === currentIndex ? "bg-[#315b86]" : "bg-gray-300"
+                    i === currentIndex ? "bg-[#a98661]" : "bg-gray-300"
                   }`}
                 />
               ))}
             </div>
             <button
               onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
-              className="p-2 rounded-lg bg-[#315b86] hover:bg-[#061632] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

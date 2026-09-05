@@ -79,7 +79,7 @@ function NewArrivalsForm() {
             aria-describedby="new-arrivals-feedback"
             className="min-w-0 flex-1 bg-transparent px-2.5 py-2 text-xs text-[#26313b] outline-none placeholder:text-[#77766f]"
           />
-          <button type="submit" disabled={status === "loading"} className="bg-[#315b86] px-3 text-[10px] font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#234463] disabled:cursor-wait disabled:opacity-60">
+          <button type="submit" disabled={status === "loading"} className="bg-[#a98661] px-3 text-[10px] font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f] disabled:cursor-wait disabled:opacity-60">
             {status === "loading" ? "Envoi..." : "Recevoir"}
           </button>
         </div>
@@ -94,7 +94,7 @@ function NewArrivalsForm() {
 }
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-xs leading-6 lg:text-[15px] lg:leading-7 text-[#272b2d] transition-colors hover:text-[#315b86] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#315b86] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
+  return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-xs leading-6 lg:text-[15px] lg:leading-7 text-[#272b2d] transition-colors hover:text-[#a98661] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#a98661] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
 }
 
 export default function Footer({ hideMobileMap = false }: { hideMobileMap?: boolean }) {
@@ -140,14 +140,14 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
             <div className="mt-5 space-y-1 text-xs leading-5 text-[#5c5d5a] lg:text-[13px]">
-              <a href="tel:+213553204043" className="block transition-colors hover:text-[#315b86]">0553 20 40 43</a>
-              <a href="mailto:naouihakim044@gmail.com" className="block break-all transition-colors hover:text-[#315b86]">naouihakim044@gmail.com</a>
+              <a href="tel:+213553204043" className="block transition-colors hover:text-[#a98661]">0553 20 40 43</a>
+              <a href="mailto:naouihakim044@gmail.com" className="block break-all transition-colors hover:text-[#a98661]">naouihakim044@gmail.com</a>
               <p>Birkhadem, Algérie</p>
               <p>Ouvert tous les jours, 10:00–20:00</p>
             </div>
             <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
-            <div className="mt-6 flex gap-4 text-[#315b86]">
+            <div className="mt-6 flex gap-4 text-[#a98661]">
               <Link href="https://facebook.com/p/Ozmeuble-100092552539793" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
               <Link href="https://instagram.com/oz.meuble" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></Link>
               <Link href="https://tiktok.com/@oz.meuble" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
@@ -161,7 +161,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
 
         <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
           <p>© 2026 Oz meuble. Tous droits réservés.</p>
-          <div className="flex gap-5"><Link href="/terms" className="hover:text-[#315b86]">Conditions</Link><Link href="/privacy" className="hover:text-[#315b86]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#315b86]">Cookies</Link></div>
+          <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
       </div>
     </footer>

@@ -440,19 +440,6 @@ body {
   }
 }
 
-/* Replace legacy gold accents with dark blue site-wide. The Why Choose Oz section is intentionally excluded. */
-:where([class*="8b7344"], [class*="8a6a32"], [class*="8b6508"], [class*="a89163"], [class*="d2b979"], [class*="bd8b3d"], [class*="c9964b"], [class*="c98e34"], [class*="c89543"], [class*="8f7137"], [class*="b18d4d"], [class*="e1c47d"], [class*="d4af5f"]) {
-  color: #315b86 !important;
-  border-color: #315b86 !important;
-}
-:where([class*="8b7344"], [class*="8a6a32"], [class*="8b6508"], [class*="a89163"], [class*="d2b979"], [class*="c89543"]) {
-  background-color: #315b86 !important;
-}
-:where([class*="amber-900"], [class*="yellow-900"], [class*="amber-100"], [class*="yellow-100"]) {
-  color: #9bb9d8 !important;
-  background-image: none !important;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -81,14 +81,14 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur border border-[#315b86]/30 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur border border-[#a98661]/30 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-[#315b86] text-[#315b86]"
+                    className="w-5 h-5 fill-[#a98661] text-[#a98661]"
                   />
                 ))}
               </div>
@@ -100,7 +100,7 @@ export default function Testimonials() {
 
               {/* User Info */}
               <div className="flex items-center gap-3 pt-4 border-t border-gray-700">
-                <div className="w-10 h-10 bg-[#315b86] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 bg-[#a98661] rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {testimonial.avatar}
                 </div>
                 <div className="flex-1">

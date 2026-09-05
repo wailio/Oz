@@ -138,15 +138,15 @@ export default function ShowcaseHero() {
       {/* Desktop - 3 Column Layout */}
       <section ref={containerRef} className="hidden md:block py-0 bg-white relative overflow-hidden">
         {/* Decorative luxury shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#315b86]/20 rounded-full decorator-shape" style={{ opacity: 0.6 }}></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 border-2 border-[#315b86]/20 rotate-45 decorator-shape" style={{ opacity: 0.5 }}></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-[#315b86]/30 decorator-shape rotate" style={{ opacity: 0.4 }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-28 h-28 border-2 border-[#315b86]/15 rounded-3xl decorator-shape" style={{ opacity: 0.5 }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#a98661]/20 rounded-full decorator-shape" style={{ opacity: 0.6 }}></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 border-2 border-[#a98661]/20 rotate-45 decorator-shape" style={{ opacity: 0.5 }}></div>
+        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-[#a98661]/30 decorator-shape rotate" style={{ opacity: 0.4 }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-28 h-28 border-2 border-[#a98661]/15 rounded-3xl decorator-shape" style={{ opacity: 0.5 }}></div>
 
         {/* Diagonal lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.1 }}>
-          <line x1="0" y1="0" x2="100%" y2="100%" stroke="#315b86" strokeWidth="2" />
-          <line x1="100%" y1="0" x2="0" y2="100%" stroke="#315b86" strokeWidth="2" />
+          <line x1="0" y1="0" x2="100%" y2="100%" stroke="#a98661" strokeWidth="2" />
+          <line x1="100%" y1="0" x2="0" y2="100%" stroke="#a98661" strokeWidth="2" />
         </svg>
 
         <div className="flex items-center justify-center gap-8 px-6 lg:px-12 min-h-screen relative z-10">
@@ -163,12 +163,12 @@ export default function ShowcaseHero() {
             <div className="relative z-20 px-6 pt-8 flex flex-col flex-1 justify-between">
               <div className="text-white">
                 <p className="text-xs font-serif mb-1 opacity-80 group-hover:opacity-100 transition-opacity">PREMIUM INTERIORS</p>
-                <p className="text-lg font-serif font-bold group-hover:text-blue-200 transition-colors">2026</p>
+                <p className="text-lg font-serif font-bold group-hover:text-yellow-100 transition-colors">2026</p>
               </div>
             </div>
 
             <div className="relative z-20 px-6 pb-8">
-              <h2 className="text-2xl font-serif font-bold text-white mb-2 group-hover:text-blue-200 transition-colors">MODERN LIVING</h2>
+              <h2 className="text-2xl font-serif font-bold text-white mb-2 group-hover:text-yellow-100 transition-colors">MODERN LIVING</h2>
               <p className="text-sm font-serif text-white/90 mb-4">Transform your space with curated contemporary designs</p>
               <Link href="/all-products?category=interior">
                 <button className="border-2 border-white text-white px-5 py-2 font-serif uppercase text-xs tracking-widest hover:bg-white hover:text-gray-900 transition-all duration-300 cursor-pointer group-hover:shadow-lg">
@@ -250,7 +250,7 @@ export default function ShowcaseHero() {
             </div>
 
             <div className="relative z-20 px-6 pb-8">
-              <h2 className="text-2xl font-serif font-bold text-white mb-2 text-right group-hover:text-blue-200 transition-colors">DESIGNER SPACES</h2>
+              <h2 className="text-2xl font-serif font-bold text-white mb-2 text-right group-hover:text-yellow-100 transition-colors">DESIGNER SPACES</h2>
               <p className="text-sm font-serif text-white/90 mb-4 text-right">Luxury meets functionality in every piece</p>
               <div className="flex justify-end">
                 <Link href="/all-products?category=kitchen">
@@ -267,8 +267,8 @@ export default function ShowcaseHero() {
       {/* Mobile - Stacked Sections */}
       <section className="md:hidden bg-white relative overflow-hidden">
         {/* Small decorative shapes for mobile */}
-        <div className="absolute top-10 left-5 w-16 h-16 border border-[#315b86]/20 rounded-full decorator-shape pointer-events-none" style={{ opacity: 0.4 }}></div>
-        <div className="absolute bottom-10 right-5 w-20 h-20 border border-[#315b86]/20 rotate-45 decorator-shape pointer-events-none" style={{ opacity: 0.3 }}></div>
+        <div className="absolute top-10 left-5 w-16 h-16 border border-[#a98661]/20 rounded-full decorator-shape pointer-events-none" style={{ opacity: 0.4 }}></div>
+        <div className="absolute bottom-10 right-5 w-20 h-20 border border-[#a98661]/20 rotate-45 decorator-shape pointer-events-none" style={{ opacity: 0.3 }}></div>
         
         {/* Left section */}
         <div className="showcase-item relative h-64 overflow-hidden flex flex-col justify-between cursor-pointer">

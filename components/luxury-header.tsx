@@ -63,28 +63,28 @@ export default function LuxuryHeader() {
         <div dir="ltr" className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
           {/* Left Side - Social Icons */}
           <div className="flex items-center gap-3">
-            <Link href="https://facebook.com/p/Ozmeuble-100092552539793" target="_blank" rel="noopener noreferrer" className={`hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://facebook.com/p/Ozmeuble-100092552539793" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Facebook className="w-4 h-4" />
             </Link>
-            <Link href="https://instagram.com/oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://instagram.com/oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Instagram className="w-4 h-4" />
             </Link>
-            <Link href="https://tiktok.com/@oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://tiktok.com/@oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Music2 className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Center - Navigation Links */}
           <div className="flex -translate-x-6 items-center gap-6">
-            <Link href="/rooms" className={`flex items-center gap-1 hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/rooms" className={`flex items-center gap-1 hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Sofa className="h-3.5 w-3.5" aria-hidden="true" /> PIÈCES
             </Link>
             <span className={`${topBarTextColor}`}>•</span>
-            <Link href="/inspirations" className={`flex items-center gap-1 hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/inspirations" className={`flex items-center gap-1 hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Lightbulb className="h-3.5 w-3.5" aria-hidden="true" /> INSPIRATIONS
             </Link>
             <span className={`${topBarTextColor}`}>•</span>
-            <Link href="/offers" className={`flex items-center gap-1 hover:text-[#315b86] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/offers" className={`flex items-center gap-1 hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Gift className="h-3.5 w-3.5" aria-hidden="true" /> OFFRES
             </Link>
           </div>
@@ -114,13 +114,13 @@ export default function LuxuryHeader() {
 
           {/* Center Menu - Compact */}
           <nav className="flex min-w-0 flex-1 items-center justify-center gap-6 px-6 font-[var(--font-manrope)] lg:gap-10 lg:px-10">
-            <Link href="/all-products" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#315b86] ${headerTextColor}`}>
+            <Link href="/all-products" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#a98661] ${headerTextColor}`}>
               Produits
             </Link>
-            <Link href="/contact" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#315b86] ${headerTextColor}`}>
+            <Link href="/contact" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#a98661] ${headerTextColor}`}>
               Contact
             </Link>
-            <Link href="/about" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#315b86] ${headerTextColor}`}>
+            <Link href="/about" className={`whitespace-nowrap font-[var(--font-montserrat)] text-sm font-medium tracking-[0.14em] transition-colors duration-300 hover:text-[#a98661] ${headerTextColor}`}>
               À Propos
             </Link>
           </nav>
@@ -128,7 +128,7 @@ export default function LuxuryHeader() {
           {/* Right Side - Explorer Button */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link href="/all-products">
-              <Button className="rounded-md border border-[#315b86]/70 bg-[#241d13]/90 px-6 py-2 font-[var(--font-manrope)] text-xs font-medium tracking-[0.08em] text-[#9bb9d8] shadow-none transition-colors duration-300 hover:border-[#527da8] hover:bg-[#302516] hover:text-[#c4d9ed]">
+              <Button className="rounded-md border border-[#8f7137]/70 bg-[#241d13]/90 px-6 py-2 font-[var(--font-manrope)] text-xs font-medium tracking-[0.08em] text-[#e1c47d] shadow-none transition-colors duration-300 hover:border-[#b18d4d] hover:bg-[#302516] hover:text-[#f0d99d]">
                 Découvrir
               </Button>
             </Link>
