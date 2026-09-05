@@ -709,6 +709,68 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 38,
+    name: "Armoire CANOPÉE",
+    price: "58,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/689263451_18155070256461991_6502792337098745532_n-vCRlnDP6Hkm8eODpYp0zjQD1K3w4dw.jpg",
+    ],
+    description: "Armoire CANOPÉE en finition marron, avec façades en cannage naturel et poignées discrètes pour un rangement élégant.",
+    dimension: "1m20",
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/689263451_18155070256461991_6502792337098745532_n-vCRlnDP6Hkm8eODpYp0zjQD1K3w4dw.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 39,
+    name: "Armoire RIVOLI",
+    price: "64,750 DZD",
+    originalPrice: "72,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686289576_18155070208461991_4416137747890154382_n-7mplXZnVYQdSjfJpkpo8WWVHnAnAcY.jpg",
+    ],
+    description: "Armoire RIVOLI en bois marron foncé, sublimée par un cannage graphique et une silhouette compacte adaptée aux intérieurs raffinés.",
+    dimension: "1m10",
+    discount: 11,
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686289576_18155070208461991_4416137747890154382_n-7mplXZnVYQdSjfJpkpo8WWVHnAnAcY.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 40,
+    name: "Commode ÉCLOSION",
+    price: "51,300 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686419824_18155070265461991_2788758347228807228_n-Ll0ZYz4ZIY8szaaQCGIQIM1gFYntwp.jpg",
+    ],
+    description: "Commode ÉCLOSION en teinte marron chaleureuse, avec trois tiroirs cannés pour organiser vos essentiels avec style.",
+    dimension: "0m80",
+    category: "armoire",
+    colors: [
+      {
+        name: "Marron",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686419824_18155070265461991_2788758347228807228_n-Ll0ZYz4ZIY8szaaQCGIQIM1gFYntwp.jpg",
+        ],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {
