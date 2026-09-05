@@ -606,7 +606,7 @@ export const allProducts: Product[] = [
     colors: [
       {
         name: "Marron",
-        swatch: "/products/pr2.jpg",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-9lHi3qs18YXZbiHKvMoLPW3lGZziWs.png",
         images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
       },
     ],
