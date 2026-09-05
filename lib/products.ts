@@ -661,6 +661,54 @@ export const allProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 36,
+    name: "Canapé NUAGE",
+    price: "118,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
+    ],
+    description: "Canapé NUAGE en tissu ivoire naturel, avec une assise généreuse et des lignes douces pour un salon élégant et accueillant.",
+    dimension: "3m20",
+    category: "sofas",
+    colors: [
+      {
+        name: "Blanc ivoire / nature",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blanc.ivoire.nature-WXorZQMKOtdOrp0lFyEDGifMGSOI8w.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-1pHuO6KIQrAVm12JaK5jgqxSMhrhHd.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c-X6Chega7APFaZ6dKHM9wek0PNQH01O.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    id: 37,
+    name: "Salon MODENA",
+    price: "124,500 DZD",
+    originalPrice: "139,900 DZD",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.a-RcA5IV7nslCPOzThaYMbkqeatHUpYH.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+    ],
+    description: "Salon MODENA en coloris blanc ivoire / nature, pensé pour créer une atmosphère chaleureuse avec ses volumes enveloppants et son confort profond.",
+    dimension: "3m60",
+    discount: 11,
+    category: "sofas",
+    colors: [
+      {
+        name: "Blanc ivoire / nature",
+        swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blanc.ivoire.nature-WXorZQMKOtdOrp0lFyEDGifMGSOI8w.png",
+        images: [
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.a-RcA5IV7nslCPOzThaYMbkqeatHUpYH.png",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.b-gMDYp2g2bwx7nOZbS5zYoYgVxt1tee.jpg",
+        ],
+      },
+    ],
+  },
 ]
 
 export function getProduct(productId: string | number) {
