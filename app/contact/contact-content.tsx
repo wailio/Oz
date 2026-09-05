@@ -10,22 +10,22 @@ import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/Reveal"
 
 const contactDetails = [
-  { icon: Phone, label: "Téléphone", value: "+213 656 373 378" },
-  { icon: Mail, label: "Email", value: "mobenia23@gmail.com" },
-  { icon: MapPin, label: "Adresse", value: "Aïn Naâdja, Algérie" },
-  { icon: Clock3, label: "Horaires", value: "9:00 — 19:00" },
+  { icon: Phone, label: "Téléphone", value: "0553 20 40 43" },
+  { icon: Mail, label: "Email", value: "naouihakim044@gmail.com" },
+  { icon: MapPin, label: "Adresse", value: "Birkhadem, Algérie" },
+  { icon: Clock3, label: "Horaires", value: "10:00 — 20:00" },
 ]
 
 export default function ContactContent() {
   const searchParams = useSearchParams()
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
+  const [formData, setFormData] = useState({ name: "", phone: "", subject: "", message: "" })
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
   const [productSpotlight, setProductSpotlight] = useState(false)
   const [whatsappUrl, setWhatsappUrl] = useState("")
   const [isWhatsappModalOpen, setIsWhatsappModalOpen] = useState(false)
   const [isQrCodeFailed, setIsQrCodeFailed] = useState(false)
   const [invalidFields, setInvalidFields] = useState<string[]>([])
-  const formReset = { name: "", email: "", phone: "", subject: "", message: "" }
+  const formReset = { name: "", phone: "", subject: "", message: "" }
   const messageRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
@@ -78,28 +78,13 @@ export default function ContactContent() {
     setStatus("sending")
     setInvalidFields([])
 
-    const { name: nom, email, phone: telephone, subject: sujet, message } = formData
-    const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nEmail: ${email}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
-    const nextWhatsappUrl = `https://wa.me/2130550031052?text=${encodeURIComponent(whatsappMessage)}`
+    const { name: nom, phone: telephone, subject: sujet, message } = formData
+    const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
+    const nextWhatsappUrl = `https://wa.me/213553204043?text=${encodeURIComponent(whatsappMessage)}`
     setWhatsappUrl(nextWhatsappUrl)
     setIsQrCodeFailed(false)
 
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1)
-
-    const formElement = event.currentTarget
-    const sendEmail = async () => {
-      const emailData = new FormData(formElement)
-      emailData.append("access_key", "90d137ea-c261-4006-9d98-3bda64966d94")
-      emailData.append("subject", sujet || "Nouveau message depuis le site Mobenia")
-      emailData.append("from_name", nom)
-
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: emailData,
-      })
-      const result = await response.json()
-      if (!response.ok || !result.success) throw new Error(result.message || "Email submission failed")
-    }
 
     if (isMobile) {
       setFormData(formReset)
@@ -111,21 +96,14 @@ export default function ContactContent() {
     // Keep WhatsApp opening directly inside the submit gesture on desktop.
     const whatsappWindow = window.open(nextWhatsappUrl, "_blank")
     if (!whatsappWindow) setIsWhatsappModalOpen(true)
-
-    try {
-      await sendEmail()
-      setFormData(formReset)
-      setStatus("success")
-    } catch (error) {
-      console.error("[v0] Web3Forms submission failed:", error)
-      setStatus("error")
-    }
+    setFormData(formReset)
+    setStatus("success")
   }
 
   return (
     <main className="min-h-screen bg-[#1b1b1b] text-[#f6f1e9]">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <img src="/contact-inspiration.jpg" alt="Salon Mobenia avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
+        <img src="/contact-inspiration.jpg" alt="Salon Oz meuble avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
         <div className="absolute inset-0 bg-[#111111]/70" />
         <Reveal delay={0}>
           <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
@@ -169,7 +147,6 @@ export default function ContactContent() {
           <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4" id="contact-form">
             <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <Reveal variant="pop" delay={0}><div><label className="sr-only" htmlFor="name">Nom</label><input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Nom" className={`contact-field w-full rounded-full px-4 py-3.5 ${invalidFields.includes("name") ? "border-red-400" : ""}`} /></div></Reveal>
-            <Reveal variant="pop" delay={70}><div><label className="sr-only" htmlFor="email">Email</label><input id="email" type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={140}><div><label className="sr-only" htmlFor="phone">Téléphone</label><input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Téléphone" className={`contact-field w-full rounded-full px-4 py-3.5 ${invalidFields.includes("phone") ? "border-red-400" : ""}`} /></div></Reveal>
             <Reveal variant="pop" delay={210}><div><label className="sr-only" htmlFor="subject">Sujet</label><input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Sujet" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={280}>
@@ -195,12 +172,12 @@ export default function ContactContent() {
               <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#e8b843] px-8 py-3 text-xs font-medium text-[#282014] hover:bg-[#f0ca55]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
             </Reveal>
             {status === "success" && <p className="text-xs text-[#d2b979]" role="status">Message envoyé.</p>}
-            {status === "error" && <p className="text-xs text-red-300" role="alert">L&apos;envoi de l&apos;email a échoué. Veuillez réessayer.</p>}
+
           </form>
         </div>
 
         <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#a89163]/30 md:mt-16 md:mb-12">
-          <MapReveal src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz" title="Mobenia Furniture location" />
+          <MapReveal src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.8154402813816!2d3.0383021793457026!3d36.72699350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003e85b45b%3A0x8a15d318fb0b3f72!2sOz%20meubles!5e0!3m2!1sfr!2sdz!4v1788624522482!5m2!1sfr!2sdz" title="Oz meuble à Birkhadem" />
         </div>
       </section>
 

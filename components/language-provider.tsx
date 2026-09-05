@@ -70,7 +70,7 @@ const arabicTranslations: Record<string, string> = {
   "Nos partenariats avec les meilleurs fournisseurs nous donnent accès aux meilleurs matériaux et processus de contrôle qualité.": "تمنحنا شراكاتنا مع أفضل الموردين إمكانية الوصول إلى أجود المواد وأفضل عمليات مراقبة الجودة.",
   "Mobilier Personnalisé": "أثاث مخصص",
   "Nous spécialisons dans la création de meubles sur mesure qui correspondent parfaitement à votre vision unique et vos besoins.": "نحن متخصصون في إنشاء أثاث حسب الطلب يناسب رؤيتكم واحتياجاتكم الفريدة تمامًا.",
-  "À Propos Mobenia Furniture": "عن موبينيا للأثاث",
+  "À Propos Oz meuble": "عن Oz meuble",
   "Notre Mission": "مهمتنا",
   "Nos Valeurs Fondamentales": "قيمنا الأساسية",
   "Excellence": "التميز",
@@ -158,17 +158,17 @@ const arabicTranslations: Record<string, string> = {
   "Avis suivants": "التقييمات التالية",
   "5 étoiles": "5 نجوم",
   "Pourquoi choisir": "لماذا تختارون",
-  "Pourquoi choisir Mobenia": "لماذا تختارون Mobenia",
+  "Pourquoi choisir Oz meuble": "لماذا تختارون Oz meuble",
   "Nous nous consacrons à apporter le luxe et l'élégance à votre maison grâce à des collections de mobilier minutieusement sélectionnées qui allient design intemporel et confort moderne.": "نكرّس جهودنا لجلب الفخامة والأناقة إلى منزلكم من خلال مجموعات أثاث مختارة بعناية تجمع بين التصميم الخالد والراحة العصرية.",
   "Des collections de mobilier sélectionnées pour allier élégance, confort et design intemporel.": "مجموعات أثاث مختارة تجمع بين الأناقة والراحة والتصميم الخالد.",
-  "Chez Mobenia Furniture, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d'élégance.": "في Mobenia Furniture، نؤمن بأن منزلكم يجب أن يعكس أسلوبكم الشخصي وقيمكم. مهمتنا هي تقديم أثاث استثنائي يحوّل المساحات إلى ملاذات من الراحة والأناقة.",
-  "Fondée avec une vision de redéfinir le mobilier de luxe, Mobenia Furniture a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.": "تأسست برؤية لإعادة تعريف الأثاث الفاخر، وبدأت Mobenia Furniture كمشروع شغوف يهدف إلى تقديم قطع مختارة بعناية وعالية الجودة للعملاء ذوي الذوق الرفيع.",
+  "Chez Oz meuble, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d'élégance.": "في Oz meuble، نؤمن بأن منزلكم يجب أن يعكس أسلوبكم الشخصي وقيمكم. مهمتنا هي تقديم أثاث استثنائي يحوّل المساحات إلى ملاذات من الراحة والأناقة.",
+  "Fondée avec une vision de redéfinir le mobilier de luxe, Oz meuble a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.": "تأسست برؤية لإعادة تعريف الأثاث الفاخر، وبدأت Oz meuble كمشروع شغوف يهدف إلى تقديم قطع مختارة بعناية وعالية الجودة للعملاء ذوي الذوق الرفيع.",
   "Des meubles inspirants pour des intérieurs qui vous ressemblent.": "أثاث ملهم لمساحات داخلية تشبهكم.",
-  "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Mobenia Furniture. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !": "جودة أثاث ممتازة! اشتريت أريكة وطاولة قهوة من Mobenia Furniture. المنتجات رائعة ومصنعة بإتقان. كان الفريق متعاونًا جدًا ونصحني بأفضل الخيارات. أوصي بها بشدة!",
-  "Transformé mon salon complètement ! Les meubles de Mobenia Furniture ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.": "لقد غيّرت أثاث غرفة جلوسي بالكامل! أثاث Mobenia Furniture بجودة استثنائية. التصميم عصري وأنيق، تمامًا كما كنت أبحث عنه. توصيل سريع وخدمة عملاء احترافية جدًا.",
+  "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Oz meuble. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !": "جودة أثاث ممتازة! اشتريت أريكة وطاولة قهوة من Oz meuble. المنتجات رائعة ومصنعة بإتقان. كان الفريق متعاونًا جدًا ونصحني بأفضل الخيارات. أوصي بها بشدة!",
+  "Transformé mon salon complètement ! Les meubles de Oz meuble ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.": "لقد غيّرت أثاث غرفة جلوسي بالكامل! أثاث Oz meuble بجودة استثنائية. التصميم عصري وأنيق، تمامًا كما كنت أبحث عنه. توصيل سريع وخدمة عملاء احترافية جدًا.",
   "Bon produit": "منتج جيد",
   "Soyez les bienvenus": "أهلًا وسهلًا بكم",
-  "1 avis": "تقييم واحد",
+  "1 avis": "تقييم وا��د",
   "1 avis · 1 photo": "تقييم واحد · صورة واحدة",
   "il y a 3 ans": "منذ 3 سنوات",
   "il y a 3 mois": "منذ 3 أشهر",
@@ -199,7 +199,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname()
 
   useEffect(() => {
-    const savedLocale = window.localStorage.getItem("mobenia-locale")
+    const savedLocale = window.localStorage.getItem("oz-meuble-locale")
     if (savedLocale === "ar" || savedLocale === "fr") setLocaleState(savedLocale)
   }, [])
 
@@ -219,7 +219,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // Arabic characters still render naturally without reversing flex/grid placement.
     document.body.dir = "ltr"
     document.body.dataset.locale = locale
-    window.localStorage.setItem("mobenia-locale", locale)
+    window.localStorage.setItem("oz-meuble-locale", locale)
   }, [locale])
 
   const setLocale = (nextLocale: Locale) => setLocaleState(nextLocale)

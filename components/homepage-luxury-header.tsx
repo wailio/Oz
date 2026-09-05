@@ -30,8 +30,8 @@ export default function HomepageLuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="/logo-mobenia-furniture.png"
-                alt="Mobenia Furniture"
+                src="/logo-oz-meuble.png"
+                alt="Oz meuble"
                 width={400}
                 height={120}
                 className="h-24 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"

@@ -38,14 +38,14 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="/logo-mobenia-furniture.png"
-              alt="Mobenia Furniture"
+              src="/logo-oz-meuble.png"
+              alt="Oz meuble"
               width={120}
               height={50}
               className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
             />
           </span>
-          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Mobenia Furniture</span>
+          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Oz meuble</span>
         </Link>
 
         <div className="flex items-center gap-2">

@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "AB",
     rating: 5,
-    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Mobenia Furniture. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
+    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Oz meuble. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
     date: "Il y a 2 mois"
   },
   {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "KB",
     rating: 5,
-    text: "Transformé mon salon complètement ! Les meubles de Mobenia Furniture ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
+    text: "Transformé mon salon complètement ! Les meubles de Oz meuble ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
     date: "Il y a 1 mois"
   },
   {
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "HM",
     rating: 5,
-    text: "Réception à la hauteur ! L'équipe de Mobenia Furniture a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
+    text: "Réception à la hauteur ! L'équipe de Oz meuble a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
     date: "Il y a 1 mois"
   },
   {
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "YL",
     rating: 5,
-    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Mobenia Furniture, c'est mon choix désormais !",
+    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Oz meuble, c'est mon choix désormais !",
     date: "Il y a 2 semaines"
   },
   {
@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "OB",
     rating: 5,
-    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Mobenia Furniture à tous mes amis.",
+    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Oz meuble à tous mes amis.",
     date: "Il y a 3 jours"
   }
 ]

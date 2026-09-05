@@ -1,14 +1,14 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-react"
+import { Facebook, Instagram, Music2, Check, ArrowUpRight } from "lucide-react"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import type React from "react"
 
 const footerBackgroundImage = "/footer-chair-sketch.png"
 const atelierLampImage = "/atelier-maison-lamp.png"
-const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz"
+const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.8154402813816!2d3.0383021793457026!3d36.72699350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad003e85b45b%3A0x8a15d318fb0b3f72!2sOz%20meubles!5e0!3m2!1sfr!2sdz!4v1788624522482!5m2!1sfr!2sdz"
 
 function NewArrivalsForm() {
   const [email, setEmail] = useState("")
@@ -107,9 +107,9 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-4">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
           <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
-            <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Oz meuble" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="relative z-10 mx-auto max-w-[18rem] text-center text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
-              <p className="font-[family-name:var(--font-great-vibes)] text-5xl font-normal leading-none text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111]">Mobenia Furniture</p>
+              <p className="font-[family-name:var(--font-great-vibes)] text-5xl font-normal leading-none text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111]">Oz meuble</p>
             </div>
             <p className="absolute bottom-5 left-1/2 z-10 w-[calc(100%-3rem)] max-w-[18rem] -translate-x-1/2 text-center text-xs leading-5 text-[#454844] sm:bottom-7">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
           </section>
@@ -127,34 +127,40 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
               <FooterLink href="/inspirations">Inspirations</FooterLink>
             </nav>
             <div className="mt-5 hidden overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf] lg:block">
-              <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-28 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+              <iframe title="Oz meuble sur Google Maps" src={footerMapEmbed} className="h-28 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </section>
 
           <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 sm:px-8 sm:py-8 lg:px-8 lg:py-9">
-            <h3 className="relative mb-3 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Mobenia Furniture</h3>
+            <h3 className="relative mb-3 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Oz meuble</h3>
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
+            <div className="mt-5 space-y-1 text-xs leading-5 text-[#5c5d5a] lg:text-[13px]">
+              <a href="tel:+213553204043" className="block transition-colors hover:text-[#a98661]">0553 20 40 43</a>
+              <a href="mailto:naouihakim044@gmail.com" className="block break-all transition-colors hover:text-[#a98661]">naouihakim044@gmail.com</a>
+              <p>Birkhadem, Algérie</p>
+              <p>Ouvert tous les jours, 10:00–20:00</p>
+            </div>
             <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
             <div className="mt-6 flex gap-4 text-[#a98661]">
-              <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
-              <Link href="https://instagram.com/mobenia_furniture" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></Link>
-              <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
+              <Link href="https://facebook.com/p/Ozmeuble-100092552539793" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
+              <Link href="https://instagram.com/oz.meuble" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></Link>
+              <Link href="https://tiktok.com/@oz.meuble" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
             </div>
           </section>
         </div>
 
         <div className={`order-2 overflow-hidden border-y border-[#c7c3b9] bg-[#ddd9cf] lg:hidden ${shouldHideMobileMap ? "hidden" : "block"}`}>
-          <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+          <iframe title="Oz meuble sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
         <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
-          <p>© 2026 Mobenia Furniture. Tous droits réservés.</p>
+          <p>© 2026 Oz meuble. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
       </div>

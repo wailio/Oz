@@ -65,17 +65,17 @@ body[data-locale="ar"] button {
   .language-switcher { animation: none; }
 }
 
-@keyframes mobenia-delivery-pulse {
+@keyframes oz-delivery-pulse {
   0%, 100% { opacity: 0.78; transform: translateY(0); }
   50% { opacity: 1; transform: translateY(-2px); }
 }
 
 .delivery-benefit {
-  animation: mobenia-delivery-pulse 3.6s ease-in-out infinite;
+  animation: oz-delivery-pulse 3.6s ease-in-out infinite;
 }
 
 .delivery-benefit-icon {
-  animation: mobenia-delivery-pulse 3.6s ease-in-out infinite;
+  animation: oz-delivery-pulse 3.6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

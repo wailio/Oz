@@ -80,7 +80,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto text-center">
           <RevealOnLoad delay={80}>
             <h1 className="whitespace-nowrap text-xl md:text-4xl font-serif font-bold text-white mb-3">
-              À Propos Mobenia Furniture
+              À Propos Oz meuble
             </h1>
             <div className="mx-auto mt-2 h-7 w-full max-w-[320px] overflow-visible opacity-90 md:mt-3 md:max-w-[440px]" aria-hidden="true">
               <svg viewBox="0 0 360 34" className="about-underline h-full w-full overflow-visible">
@@ -115,11 +115,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Reveal delay={0}>
-                <h2 className="mb-6 flex items-center gap-2 text-2xl font-serif font-bold text-white md:text-3xl"><span>Notre Mission</span><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mobenia-logo-f5XQBG0RqAbNy1mpeYJl1Xxs9MqQLZ.png" alt="" className="h-8 w-8 object-contain md:hidden" /></h2>
+                <h2 className="mb-6 flex items-center gap-2 text-2xl font-serif font-bold text-white md:text-3xl"><span>Notre Mission</span><img src="/logo-oz-meuble.png" alt="" className="h-8 w-8 object-contain md:hidden" /></h2>
               </Reveal>
               <Reveal delay={150}>
                 <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
-                  Chez Mobenia Furniture, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
+                  Chez Oz meuble, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
                 </p>
               </Reveal>
               <Reveal delay={300}>
@@ -131,8 +131,8 @@ export default function AboutPage() {
             <Reveal delay={450} variant="scale" className="hidden items-center justify-center md:flex">
               <div className="mission-logo-float">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mobenia-logo-f5XQBG0RqAbNy1mpeYJl1Xxs9MqQLZ.png"
-                  alt="Logo Mobenia"
+                  src="/logo-oz-meuble.png"
+                  alt="Logo Oz meuble"
                   className="mission-logo-sway h-auto w-full max-w-[220px] object-contain"
                 />
               </div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
               <div>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Histoire</h2>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
-                Fondée avec une vision de redéfinir le mobilier de luxe, Mobenia Furniture a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
+                Fondée avec une vision de redéfinir le mobilier de luxe, Oz meuble a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
               </p>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
                 Au fil des années, nous sommes devenus une destination de confiance pour le mobilier de luxe, reconnue pour notre engagement envers un design exceptionnel, un savoir-faire de qualité et un service client exceptionnel.

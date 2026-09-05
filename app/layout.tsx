@@ -15,8 +15,8 @@ const _notoArabic = Noto_Sans_Arabic({ subsets: ["arabic"], variable: "--font-ar
 const _amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-amiri" })
 
 export const metadata: Metadata = {
-  title: "Mobenia Furniture | Meubles Luxe",
-  description: "Découvrez notre collection exclusive de meubles de luxe pour transformer votre espace",
+  title: "Oz meuble | Mobilier à Birkhadem",
+  description: "Découvrez Oz meuble à Birkhadem : mobilier élégant, conseils personnalisés et pièces pour transformer votre intérieur.",
   generator: "v0.app",
   icons: {
     icon: [

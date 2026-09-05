@@ -63,13 +63,13 @@ export default function LuxuryHeader() {
         <div dir="ltr" className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
           {/* Left Side - Social Icons */}
           <div className="flex items-center gap-3">
-            <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://facebook.com/p/Ozmeuble-100092552539793" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Facebook className="w-4 h-4" />
             </Link>
-            <Link href="https://instagram.com/mobenia_furniture" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://instagram.com/oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Instagram className="w-4 h-4" />
             </Link>
-            <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://tiktok.com/@oz.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#a98661] transition-colors duration-300 ${topBarTextColor}`}>
               <Music2 className="w-4 h-4" />
             </Link>
           </div>
@@ -103,8 +103,8 @@ export default function LuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="/logo-mobenia-furniture.png"
-                alt="Mobenia Furniture"
+                src="/logo-oz-meuble.png"
+                alt="Oz meuble"
                 width={140}
                 height={60}
                 className="h-12 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
