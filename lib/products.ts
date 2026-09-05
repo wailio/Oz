@@ -771,7 +771,37 @@ export const allProducts: Product[] = [
       },
     ],
   },
-]
+  {
+    id: 41,
+    name: "Tables Gigognes LUMINA",
+    price: "29,990 DZD",
+    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/l1-BPv5KxMptYcpGYIfhP5NoX3CcjOsiQ.jpg"],
+    description: "Ensemble de tables gigognes LUMINA avec plateaux ronds et silhouette élégante pour structurer votre espace de vie.",
+    dimension: "Ensemble de 3 pièces",
+    category: "accessories",
+  },
+  {
+    id: 42,
+    name: "Tables Basses NAYA",
+    price: "34,500 DZD",
+    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/l2-uMf4jPTkP6mzLcmAQ53DJmkFLkHNFe.jpg"],
+    description: "Duo de tables basses NAYA aux plateaux minéraux et bases rainurées, idéal pour une composition chaleureuse.",
+    dimension: "Ensemble de 2 pièces",
+    category: "accessories",
+  },
+  {
+    id: 43,
+    name: "Table Basse ORGANIC",
+    price: "39,750 DZD",
+    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/l3-vWNZ7FyS9kCR4gVzjL7gmQAHZ641zW.jpg"],
+    description: "Table basse ORGANIC au plateau aux courbes douces, accompagnée d'une table d'appoint sombre pour un contraste contemporain.",
+    dimension: "Composition 2 tables",
+    category: "accessories",
+  },
+].filter((product) => ![
+  1, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25,
+  26, 27, 28, 29, 30, 31,
+].includes(product.id)) as Product[]
 
 export function getProduct(productId: string | number) {
   return allProducts.find((product) => product.id === Number(productId))

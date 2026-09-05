@@ -357,7 +357,7 @@ body {
   .contact-field {
     width: 100%;
     min-height: 3rem;
-    border: 1px solid oklch(0.68 0.08 80 / 0.65);
+    border: 1px solid #8fb4d8;
     border-radius: 9999px;
     background: transparent;
     color: var(--foreground);
@@ -371,8 +371,8 @@ body {
   }
 
   .contact-field:focus {
-    border-color: oklch(0.78 0.1 80);
-    background: oklch(0.68 0.08 80 / 0.06);
+    border-color: #b8d5f0;
+    background: color-mix(in srgb, #8fb4d8 12%, transparent);
   }
 
   textarea.contact-field {
@@ -396,7 +396,7 @@ body {
     width: 2px;
     pointer-events: none;
     opacity: 0;
-    background: linear-gradient(to bottom, transparent, #123e68 30%, #123e68 70%, transparent);
+    background: linear-gradient(to bottom, transparent, #6f91b3 30%, #6f91b3 70%, transparent);
   }
 
   .product-message-streak-left { left: -7px; }
