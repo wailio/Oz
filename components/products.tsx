@@ -413,7 +413,7 @@ export default function Products() {
         <Reveal delay={200}>
           <div className="mt-8 md:mt-12 flex justify-center">
             <Link href="/all-products">
-              <button className="border-2 border-gray-900 text-gray-900 px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
               SHOW ALL PRODUCTS
               </button>
             </Link>
