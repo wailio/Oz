@@ -17,6 +17,11 @@ export default function Hero() {
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_16_37-TNaBrKckdroA215hmxpiycAdOG9oqH.png",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_14_34-4axChhGKGaydPICnyvS1nv64ttu5nZ.png",
   ]
+  const mobileHeroImages = [
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/731808178_18160847962461991_4806252161865635123_n-ORow1iFw1BMcc5uSnKPZaIqk9F96Rv.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_22_17-qKgHgkm28cuO4oSdZop4eWHqprxi3l.png",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_23_31-iGTuZIc74u5RKJy48NXiDSHJySl5Ow.png",
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,18 +35,34 @@ export default function Hero() {
       {/* Main Hero with Rolling Images */}
       <div className="relative w-full h-[520px] md:h-[700px] lg:h-[850px] overflow-hidden">
         {/* Image Carousel */}
-        {heroImages.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={`Hero room ${index + 1}`}
-            fill
-            className={`object-cover transition-opacity duration-1000 ${
-              index === currentImageIndex ? "opacity-100" : "opacity-0"
-            }`}
-            priority={index === 0}
-          />
-        ))}
+        <div className="absolute inset-0 md:hidden">
+          {mobileHeroImages.map((image, index) => (
+            <Image
+              key={image}
+              src={image}
+              alt={`Mobile hero room ${index + 1}`}
+              fill
+              className={`object-cover transition-opacity duration-1000 ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
+        <div className="absolute inset-0 hidden md:block">
+          {heroImages.map((image, index) => (
+            <Image
+              key={image}
+              src={image}
+              alt={`Hero room ${index + 1}`}
+              fill
+              className={`object-cover transition-opacity duration-1000 ${
+                index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,21,38,0.15)_0%,rgba(13,21,38,0.55)_100%)]"></div>
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
