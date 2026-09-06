@@ -316,7 +316,7 @@ export default function Products() {
     (p) => p.category === "sofas" || p.category === "salle-a-manger" || p.id === 6,
   )
   const modelesPrets = catalogProducts
-    .filter((p) => p.category === "chambres")
+    .filter((p) => p.category === "chambres" || p.category === "salle-a-manger")
     .sort((a, b) => (a.id === 6 ? -1 : b.id === 6 ? 1 : 0))
 
   return (
