@@ -102,7 +102,7 @@ export default function Hero() {
           </div>
           <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
             <Truck className="delivery-benefit-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
-            <span className="text-xs md:text-base font-medium text-white">Gratuit sur Alger – Blida – Boumerdès – Médéa – Tipaza</span>
+            <span className="text-xs md:text-base font-medium text-white">Gratuit sur Alger ...</span>
           </div>
           </div>
         </Reveal>
