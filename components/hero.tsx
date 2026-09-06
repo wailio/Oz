@@ -47,12 +47,12 @@ export default function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
           <div className="flex max-w-3xl flex-col items-center">
             <Reveal delay={0}>
-              <p className="font-sans text-[5px] font-semibold tracking-[2px] text-[#a8823f] md:text-[13px] md:tracking-[5px]">OZ MEUBLE</p>
+              <p className="font-sans text-[5px] font-semibold tracking-[2px] text-white [text-shadow:0_0_1px_#0b2b55] [-webkit-text-stroke:0.7px_#0b2b55] md:text-[13px] md:tracking-[5px]">OZ MEUBLE</p>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-1 text-balance leading-none md:mt-[22px]">
                 <span className="block font-[family-name:var(--font-playfair)] text-[20px] font-normal leading-tight text-[#f5f2ea] md:text-[30px]">Meubles uniques pour</span>
-                <span className={`relative mt-0 inline-block px-1 pb-4 font-normal leading-none text-[#a8823f] md:mt-2 md:pb-8 ${locale === "ar" ? "font-[family-name:var(--font-amiri)] text-[clamp(2.5rem,11vw,4.8rem)] md:text-[4.5rem]" : "font-[family-name:var(--font-great-vibes)] text-[clamp(3.35rem,15vw,6.5rem)]"}`}>
+                <span className={`relative mt-0 inline-block px-1 pb-4 font-normal leading-none text-white [text-shadow:0_0_2px_#0b2b55] [-webkit-text-stroke:2px_#0b2b55] md:mt-2 md:pb-8 ${locale === "ar" ? "font-[family-name:var(--font-amiri)] text-[clamp(2.5rem,11vw,4.8rem)] md:text-[4.5rem]" : "font-[family-name:var(--font-great-vibes)] text-[clamp(3.35rem,15vw,6.5rem)]"}`}>
                   espaces modernes
                   <svg aria-hidden="true" viewBox="0 0 360 34" className="hero-underline absolute bottom-0 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible md:h-7 md:w-[115%]">
                     <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#a8823f" strokeWidth="2.2" strokeLinecap="round" />
