@@ -36,7 +36,9 @@ export default function LuxuryHeader() {
   const navBarClass = "bg-[#f7f4ee] text-[#151515]"
 
   return (
-    <header dir="ltr" className="fixed left-0 right-0 top-0 z-50 hidden w-full md:block">
+    <>
+      {isHomePage && <div aria-hidden="true" className="hidden h-[186px] md:block" />}
+      <header dir="ltr" className={`${isHomePage ? "fixed left-0 top-0" : "relative"} z-50 hidden w-full md:block`}>
       <div className={`flex h-10 items-center justify-center px-6 font-[var(--font-manrope)] text-sm font-medium ${topBarClass}`}>
         <span>Exclusive Furniture Sale Up To 50% Off</span>
       </div>
@@ -80,6 +82,7 @@ export default function LuxuryHeader() {
           <Link href="/contact" className="transition-colors hover:text-[#b18a3c]">Contact</Link>
         </div>
       </nav>
-    </header>
+      </header>
+    </>
   )
 }
