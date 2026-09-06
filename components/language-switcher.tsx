@@ -36,7 +36,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
         aria-label={`Langue active : ${activeLanguage.label}`}
         onClick={() => setIsOpen((open) => !open)}
         className={cn(
-          "flex items-center gap-2 rounded-full border border-white/15 bg-[#141414]/80 px-3 py-1.5 text-xs font-semibold tracking-[0.08em] text-white backdrop-blur-sm transition-all duration-200 hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
+          "flex items-center gap-2 rounded-[4px] border border-white/15 bg-[rgba(30,30,30,0.5)] px-2.5 py-1.5 text-xs font-semibold tracking-[0.08em] text-white backdrop-blur-[12px] transition-all duration-200 hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
           compact ? "h-9" : "h-10",
           textColor,
         )}
@@ -50,7 +50,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
         role="menu"
         aria-hidden={!isOpen}
         className={cn(
-          "absolute right-0 top-full z-50 mt-2 min-w-44 rounded-[10px] border border-white/10 bg-[#1A1A1A] p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-200 ease-out",
+          "absolute right-0 top-full z-50 mt-2 min-w-44 rounded-[6px] border border-white/10 bg-[rgba(20,20,20,0.75)] p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.28)] backdrop-blur-[16px] transition-all duration-200 ease-out",
           isOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0",
         )}
       >
@@ -65,7 +65,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
               setLocale(language.id)
               setIsOpen(false)
             }}
-            className="flex w-full items-center gap-3 rounded-md px-2.5 py-2 text-left text-sm text-white transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]"
+            className="flex w-full items-center gap-3 rounded-[3px] px-2.5 py-2 text-left text-sm font-normal text-white transition-colors hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]"
           >
             <Image src={language.icon} alt="" width={20} height={14} className="h-3.5 w-5 rounded-[2px] object-cover" />
             <span className="flex-1 whitespace-nowrap">{language.label}</span>
