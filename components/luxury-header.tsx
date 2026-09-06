@@ -54,7 +54,7 @@ export default function LuxuryHeader() {
           </Link>
 
           <Link href="/" className="group absolute left-1/2 -translate-x-1/2">
-            <Image src="/logo-oz-meuble-luxury.png" alt="Oz meuble" width={180} height={70} className="h-14 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2014_10_22-KOhJSAKVHVOq5AvPDYA3drwkgb4EPc.png" alt="Oz meuble" width={180} height={70} className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           <div className="ml-auto flex items-center gap-5">
