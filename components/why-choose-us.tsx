@@ -137,7 +137,7 @@ export default function WhyChooseUs() {
                 backgroundImage: "none",
               }}
             >
-              <div className="absolute inset-[-2%] bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.03]" style={{ backgroundImage: "url(/quality-showroom.jpeg)" }} />
+              <div className="absolute inset-[-2%] bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.03]" style={{ backgroundImage: "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_02_36-rWE2FAXbMloFB0paRmCb97icC1WOMZ.png)" }} />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,22,36,0.88)_0%,rgba(15,22,36,0.8)_18%,rgba(15,22,36,0.62)_34%,rgba(15,22,36,0.38)_50%,rgba(15,22,36,0.16)_66%,rgba(15,22,36,0.04)_82%,transparent_100%)] transition-opacity duration-700 group-hover:opacity-85" />
               <div className="relative z-10 max-w-2xl border-l border-[#c8a264] p-8 text-white">
                 <h3 className="font-serif text-3xl font-normal">Qualité Supérieure</h3>
