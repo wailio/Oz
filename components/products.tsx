@@ -227,7 +227,7 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-[#1A1A1A] rounded-none overflow-hidden transition-colors duration-300 cursor-pointer flex flex-col">
+      <div className="group flex-shrink-0 w-56 md:w-[350px] bg-[#1A1A1A] rounded-none overflow-hidden transition-colors duration-300 cursor-pointer flex flex-col">
           <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
             <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
@@ -239,7 +239,7 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
-              <p className="mt-2 line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:text-xs">{product.description}</p>
+              <p className="mt-2 hidden line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:block md:text-xs">{product.description}</p>
             </div>
             <div className="mt-5 flex items-center gap-3">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
