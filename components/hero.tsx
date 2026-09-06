@@ -18,7 +18,7 @@ export default function Hero() {
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_14_34-4axChhGKGaydPICnyvS1nv64ttu5nZ.png",
   ]
   const mobileHeroImages = [
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/731808178_18160847962461991_4806252161865635123_n-ORow1iFw1BMcc5uSnKPZaIqk9F96Rv.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_29_05-l5LeXa2w1pUu9z0XmQeRAj0iVFod6p.png",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_22_17-qKgHgkm28cuO4oSdZop4eWHqprxi3l.png",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2015_23_31-iGTuZIc74u5RKJy48NXiDSHJySl5Ow.png",
   ]
