@@ -13,8 +13,9 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
   const heroImages = [
-    "/hero-room-1.png",
-    "/hero-room-2.png",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_15_38-ye34WJAFK3GR0tIqBfnFy1JS0UDcJj.png",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_16_37-TNaBrKckdroA215hmxpiycAdOG9oqH.png",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2012_14_34-4axChhGKGaydPICnyvS1nv64ttu5nZ.png",
   ]
 
   useEffect(() => {
