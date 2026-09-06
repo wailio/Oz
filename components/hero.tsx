@@ -51,8 +51,8 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-1 text-balance leading-none md:mt-[22px]">
-                <span className="block font-[family-name:var(--font-playfair)] text-[18px] font-normal leading-tight text-[#f5f2ea] md:text-[30px]">Meubles uniques pour</span>
-                <span className={`relative mt-0 inline-block px-1 pb-4 font-normal leading-none text-[#d4af5f] [text-shadow:0_2px_12px_rgba(13,21,38,0.6)] md:mt-2 md:pb-8 ${locale === "ar" ? "font-[family-name:var(--font-amiri)] text-[clamp(2.5rem,11vw,4.8rem)] md:text-[4.5rem]" : "font-[family-name:var(--font-great-vibes)] text-[clamp(2.8rem,13vw,5.5rem)]"}`}>
+                <span className="block font-[family-name:var(--font-playfair)] text-[20px] font-normal leading-tight text-[#f5f2ea] md:text-[30px]">Meubles uniques pour</span>
+                <span className={`relative mt-0 inline-block px-1 pb-4 font-normal leading-none text-[#d4af5f] [text-shadow:0_2px_12px_rgba(13,21,38,0.6)] md:mt-2 md:pb-8 ${locale === "ar" ? "font-[family-name:var(--font-amiri)] text-[clamp(2.5rem,11vw,4.8rem)] md:text-[4.5rem]" : "font-[family-name:var(--font-great-vibes)] text-[clamp(3.35rem,15vw,6.5rem)]"}`}>
                   espaces modernes
                   <svg aria-hidden="true" viewBox="0 0 360 34" className="hero-underline absolute bottom-0 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible md:h-7 md:w-[115%]">
                     <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#c9a24b" strokeWidth="2.2" strokeLinecap="round" />
@@ -61,13 +61,13 @@ export default function Hero() {
               </h1>
             </Reveal>
             <Reveal delay={240}>
-              <p className="mt-4 max-w-[280px] font-sans text-xs font-normal leading-5 text-[#efece4] md:mt-[38px] md:max-w-[440px] md:text-[17px] md:leading-[1.5]">
+              <p className="mt-6 max-w-[300px] font-sans text-sm font-normal leading-6 text-[#efece4] md:mt-[38px] md:max-w-[440px] md:text-[17px] md:leading-[1.5]">
                 Des meubles conçus pour transformer votre espace
               </p>
             </Reveal>
             <Reveal delay={360}>
-              <Link href="/contact" className="mt-4 inline-block md:mt-7">
-                <Button className="min-h-9 rounded-[2px] border-2 border-[#1a2942] bg-[#1a2942] px-4 py-2 font-serif text-[9px] font-normal uppercase tracking-[2px] text-[#f5f2ea] shadow-none transition-colors duration-250 ease-out hover:bg-[#c9a24b] hover:text-[#0A0A0A] focus-visible:bg-[#c9a24b] focus-visible:text-[#0A0A0A] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
+              <Link href="/contact" className="mt-5 inline-block md:mt-7">
+                <Button className="min-h-11 rounded-[2px] border-4 border-[#1a2942] bg-[#1a2942] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#f5f2ea] shadow-none transition-colors duration-250 ease-out hover:bg-[#c9a24b] hover:text-[#0A0A0A] focus-visible:bg-[#c9a24b] focus-visible:text-[#0A0A0A] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
                   Nous contacter
                 </Button>
               </Link>
