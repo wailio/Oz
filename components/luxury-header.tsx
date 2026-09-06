@@ -49,7 +49,7 @@ export default function LuxuryHeader() {
             </span>
             <span className="flex flex-col font-[var(--font-manrope)] leading-tight">
               <span className="text-sm opacity-65">Need Help ?</span>
-              <span className="mt-1 text-base font-semibold">+123 456 789</span>
+              <span className="mt-1 text-base font-semibold">0553 20 40 43</span>
             </span>
           </Link>
 
