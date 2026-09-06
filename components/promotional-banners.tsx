@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal"
 export default function PromotionalBanners() {
   return (
     <section className="w-full" id="promotional-banners">
-      <div className="h-12 bg-[#0A0A0A] md:h-20"></div>
+      <div className="h-12 bg-[#0A0A0A] md:h-20 md:bg-white"></div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* Banner 1: Perfect Armchair */}
