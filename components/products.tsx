@@ -333,7 +333,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:h-9 md:w-9"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:top-0 md:h-9 md:w-9 md:translate-y-0"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -377,7 +377,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:h-9 md:w-9"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:top-0 md:h-9 md:w-9 md:translate-y-0"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
