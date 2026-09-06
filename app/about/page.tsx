@@ -131,8 +131,8 @@ export default function AboutPage() {
             <Reveal delay={450} variant="scale" className="hidden items-center justify-center md:flex">
               <div className="mission-logo-float">
                 <img
-                  src="/logo-oz-meuble.png"
-                  alt="Logo Oz meuble"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%205%20sept.%202026%2C%2020_34_37-CnNMJdzyiktjxJXNQIAeZNTzqvawuP.png"
+                  alt="Logo Oz meuble bleu et doré"
                   className="mission-logo-sway h-auto w-full max-w-[220px] object-contain"
                 />
               </div>
