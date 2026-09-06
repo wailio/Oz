@@ -79,13 +79,11 @@ export default function CustomerReviews() {
                 <h2 className="font-serif text-4xl font-normal leading-tight text-[#F0EDE6] lg:text-5xl">Ce Que Disent Nos Clients</h2>
                 <div className="mt-6 h-px w-14 bg-[#F0EDE6]" />
               </div>
-              <div className="w-[220px] rounded-[5px] border border-[#3b3325] bg-[#171717] p-4">
-                <div className="flex items-start gap-3">
-                  <img src="/google-logo.png" alt="Google" className="mt-1 h-5 w-5 object-contain" />
-                  <div><p className="font-sans text-[8px] uppercase tracking-[0.16em] text-[#807b72]">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-sans text-xl text-[#F0EDE6]">Google</p></div>
-                </div>
-                <div className="mt-2 flex gap-1" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="mt-4 flex h-10 items-center justify-between bg-[#b4883d] px-3 font-sans text-[9px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#956e2f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-xl font-normal" aria-hidden="true">→</span></a>
+              <div className="flex w-[360px] items-center gap-4 rounded-[5px] border border-[#3b3325] bg-[#171717] px-4 py-3">
+                <img src="/google-logo.png" alt="Google" className="h-5 w-5 shrink-0 object-contain" />
+                <div className="shrink-0"><p className="font-sans text-[8px] uppercase tracking-[0.16em] text-[#807b72]">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-sans text-xl leading-5 text-[#F0EDE6]">Google</p></div>
+                <div className="flex shrink-0 gap-0.5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="ml-auto flex h-10 items-center gap-6 bg-[#b4883d] px-4 font-sans text-[9px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#956e2f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
@@ -96,11 +94,11 @@ export default function CustomerReviews() {
         <div className="hidden md:block relative group">
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto scroll-smooth pb-4"
+            className="flex gap-5 overflow-x-auto scroll-smooth px-0 pb-4"
             style={{ scrollBehavior: 'smooth' }}
           >
             {mobileReviews.slice(0, 4).map((review) => (
-              <div key={review.author} className="flex h-48 w-[305px] flex-shrink-0 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left lg:w-[305px]">
+              <div key={review.author} className="flex h-48 min-w-0 flex-1 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left">
                 <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>
                   {Array.from({ length: review.rating }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}
                 </div>
@@ -114,7 +112,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('left')}
             aria-label="Avis précédents"
-            className="absolute left-0 top-1/2 z-10 -translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
+            className="absolute left-0 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -125,7 +123,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('right')}
             aria-label="Avis suivants"
-            className="absolute right-0 top-1/2 z-10 translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
+            className="absolute right-0 top-1/2 z-10 translate-x-1/2 -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
