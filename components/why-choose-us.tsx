@@ -8,12 +8,12 @@ import type { LucideIcon } from "lucide-react"
 
 function FeatureCard({ icon: Icon, title, children, tall = false }: { icon: LucideIcon; title: string; children: React.ReactNode; tall?: boolean }) {
   return (
-    <div className={`group flex ${tall ? "h-80" : "h-64"} flex-col justify-between rounded-[9px] border border-[#8c6c3e]/70 bg-[#111827] p-7 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#c8a264]`}>
+    <div className={`group flex ${tall ? "h-80" : "h-64"} flex-col justify-between rounded-[9px] border border-black/10 bg-[#fafaf8] p-7 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#c8a264]`}>
       <div>
         <Icon className="mb-7 size-8 stroke-[1.15] text-[#c8a264] transition-transform duration-500 group-hover:scale-105" aria-hidden="true" />
         <div className="mb-4 h-px w-8 bg-[#c8a264]" />
-        <h3 className="font-serif text-[22px] font-normal text-white">{title}</h3>
-        <p className="mt-5 text-sm leading-[1.6] text-white/70">{children}</p>
+        <h3 className="font-serif text-[22px] font-normal text-[#0a0a0a]">{title}</h3>
+        <p className="mt-5 text-sm leading-[1.6] text-[#555555]">{children}</p>
       </div>
       <span className="flex translate-x-0 items-center justify-end text-lg text-[#c8a264] opacity-70 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100" aria-hidden="true">→</span>
     </div>
@@ -64,13 +64,12 @@ export default function WhyChooseUs() {
   return (
     <section 
       ref={containerRef}
-      className="py-8 md:py-24 px-4 md:px-8 lg:px-16" 
-      style={{ backgroundColor: "#111827" }}
+      className="bg-[#111827] px-4 py-8 md:bg-white md:px-8 md:py-24 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 md:mb-16 text-center">
           <Reveal>
-            <h2 className="text-xl font-serif font-semibold text-white md:text-[44px]">
+            <h2 className="text-xl font-serif font-semibold text-white md:text-[44px] md:text-[#0a0a0a]">
               Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Oz meuble</span>
             </h2>
           </Reveal>
