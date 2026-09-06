@@ -11,6 +11,18 @@ const reviews = [
   { image: "/review-illyes.png", author: "Illyes Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "" },
 ]
 
+const mobileReviews = [
+  { author: "redouane naoui", rating: 5, text: "Très bien reçu 10/10 merci mon fils" },
+  { author: "Omar Merfoud", rating: 5, text: "J'ai bien reçu ma commande merci de votre professionnalisme" },
+  { author: "Naoui Lila", rating: 5, text: "Très bien reçu merci" },
+  { author: "Islam Abriche", rating: 5, text: "Merci pour votre sérieux" },
+  { author: "Kouider Khadidja", rating: 5, text: "Les pro bravo Oz" },
+  { author: "Isseri Nassereddine", rating: 5, text: "10/10" },
+  { author: "Rania Dirar", rating: 5, text: "10/10" },
+  { author: "Khalouf Aziz", rating: 4, text: "Meilleur site" },
+  { author: "Moncef djelloul Djafer cherif", rating: 5, text: "Vous avez un livreur très charmant" },
+]
+
 export default function CustomerReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -39,8 +51,8 @@ export default function CustomerReviews() {
     if (!isMobile || prefersReducedMotion) return
 
     const interval = window.setInterval(() => {
-      setCurrentIndex((previous) => (previous + 1) % reviews.length)
-    }, 2000)
+      setCurrentIndex((previous) => (previous + 1) % mobileReviews.length)
+    }, 5000)
 
     return () => window.clearInterval(interval)
   }, [])
@@ -57,11 +69,11 @@ export default function CustomerReviews() {
   }
 
   return (
-    <section dir="ltr" id="offres" className="py-12 md:py-24 px-4 md:px-6 bg-white">
+    <section dir="ltr" id="offres" className="bg-[#0A0A0A] px-4 py-12 md:bg-white md:px-6 md:py-24">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="mb-4 flex h-auto items-start justify-center md:mb-8 md:h-64">
-            <h2 className="pt-4 text-center text-2xl font-serif font-bold text-gray-900 md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
+            <h2 className="pt-4 text-center font-serif text-2xl font-bold text-[#F0EDE6] md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
             <div className="hidden w-full items-center gap-12 md:flex" aria-label="Laisser un avis Google">
               <div className="relative flex min-w-0 flex-1 flex-col justify-center pb-8 pl-4 lg:pl-10">
                 <p className="mb-6 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#bd8b3d]">AVIS CLIENTS</p>
@@ -133,52 +145,37 @@ export default function CustomerReviews() {
           </button>
         </div>
 
-        {/* Mobile - Carousel */}
+        {/* Mobile - Simplified Carousel */}
         <div className="md:hidden">
-          <div className="flex h-[430px] flex-col items-start overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 text-left mb-6">
-            <div className="flex h-48 w-full flex-none items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-white">
-              <img src={reviews[currentIndex].image} alt={`Avis de ${reviews[currentIndex].author}`} className="h-full w-full object-contain" />
+          <div className="relative mx-auto max-w-sm px-5">
+            <div className="min-h-[230px] rounded-xl border border-white/[0.08] bg-[#161616] p-5 text-center shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition-opacity duration-400 ease-in-out">
+              <div className="mb-5 flex justify-center gap-1" aria-label={`${mobileReviews[currentIndex].rating} étoiles`}>
+                {Array.from({ length: mobileReviews[currentIndex].rating }, (_, index) => (
+                  <Star key={index} className="h-4 w-4 fill-[#A8823F] text-[#A8823F]" aria-hidden="true" />
+                ))}
+              </div>
+              <p className="text-pretty font-sans text-sm leading-6 text-[#B0B0B0]">&quot;{mobileReviews[currentIndex].text}&quot;</p>
+              <p className="mt-6 font-sans text-sm font-bold text-[#F0EDE6]">{mobileReviews[currentIndex].author}</p>
             </div>
-            <div className="flex gap-1 mb-3 justify-start">
-              {[...Array(reviews[currentIndex].rating)].map((_, j) => (
-                <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-            </div>
-            <p className="text-xs font-semibold text-gray-900 text-left">{reviews[currentIndex].author}</p>
-            <p className="text-gray-500 text-xs mb-2">{reviews[currentIndex].role}</p>
-            <p className="text-sm text-gray-700 mb-3 leading-relaxed">
-              {reviews[currentIndex].text}
-            </p>
-            <p className="text-gray-500 text-xs">{reviews[currentIndex].years}</p>
+            <button
+              onClick={() => setCurrentIndex((previous) => (previous - 1 + mobileReviews.length) % mobileReviews.length)}
+              aria-label="Avis précédent"
+              className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-[#A8823F] p-2.5 text-white shadow-lg transition-colors hover:bg-[#8f6d32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8823F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button
+              onClick={() => setCurrentIndex((previous) => (previous + 1) % mobileReviews.length)}
+              aria-label="Avis suivant"
+              className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-[#A8823F] p-2.5 text-white shadow-lg transition-colors hover:bg-[#8f6d32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A8823F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A]"
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
           </div>
-
-          <div className="flex justify-between items-center gap-3">
-            <button
-              onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
-              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
-            >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <div className="flex gap-2 flex-1 justify-center">
-              {reviews.map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-2 w-2 rounded-full transition-colors ${
-                    i === currentIndex ? "bg-[#a98661]" : "bg-gray-300"
-                  }`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
-              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
-            >
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+          <div className="mt-6 flex justify-center gap-2" aria-label="Choisir un avis">
+            {mobileReviews.map((review, index) => (
+              <button key={review.author} onClick={() => setCurrentIndex(index)} aria-label={`Afficher l'avis de ${review.author}`} aria-current={index === currentIndex ? "true" : undefined} className={`h-2 w-2 rounded-full border transition-colors ${index === currentIndex ? "border-[#A8823F] bg-[#A8823F]" : "border-[#737373] bg-transparent"}`} />
+            ))}
           </div>
         </div>
         </Reveal>
