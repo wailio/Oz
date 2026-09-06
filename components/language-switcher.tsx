@@ -7,8 +7,16 @@ import { cn } from "@/lib/utils"
 import { useLanguage } from "@/components/language-provider"
 
 const languages = [
-  { id: "fr" as const, label: "Français", icon: "/icons/french.png" },
-  { id: "ar" as const, label: "العربية", icon: "/icons/arabic.png" },
+  {
+    id: "fr" as const,
+    label: "Français",
+    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/france-AVQVPmzNTdDXHnDrgW1frkTbKDUgMn.webp",
+  },
+  {
+    id: "ar" as const,
+    label: "العربية",
+    icon: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/arabic-0sFrobsFN2iZel28SO9spt7XjTiUVf.webp",
+  },
 ]
 
 export function LanguageSwitcher({ textColor = "text-white", compact = false }: { textColor?: string; compact?: boolean }) {
