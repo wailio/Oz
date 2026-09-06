@@ -8,7 +8,7 @@ import type { LucideIcon } from "lucide-react"
 
 function FeatureCard({ icon: Icon, title, children, tall = false }: { icon: LucideIcon; title: string; children: React.ReactNode; tall?: boolean }) {
   return (
-    <div className={`group flex ${tall ? "h-80" : "h-64"} flex-col justify-between rounded-[9px] border border-black/10 bg-[#fafaf8] p-7 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#c8a264]`}>
+    <div className={`group flex ${tall ? "h-80" : "h-64"} flex-col justify-between rounded-[9px] border border-[rgba(0,0,0,0.06)] bg-[#F2F1EE] p-7 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#c8a264]`}>
       <div>
         <Icon className="mb-7 size-8 stroke-[1.15] text-[#c8a264] transition-transform duration-500 group-hover:scale-105" aria-hidden="true" />
         <div className="mb-4 h-px w-8 bg-[#c8a264]" />
