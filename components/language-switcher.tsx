@@ -36,7 +36,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
         aria-label={`Langue active : ${activeLanguage.label}`}
         onClick={() => setIsOpen((open) => !open)}
         className={cn(
-          "flex items-center gap-2 rounded-[4px] border border-white/15 bg-[rgba(30,30,30,0.5)] px-2.5 py-1.5 text-xs font-semibold tracking-[0.08em] text-white backdrop-blur-[12px] transition-all duration-200 hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
+          "flex items-center gap-2 rounded-none border border-white/25 bg-[rgba(36,53,69,0.82)] px-3 py-1.5 text-xs font-semibold tracking-[0.08em] text-white shadow-[0_4px_14px_rgba(0,0,0,0.16)] backdrop-blur-[12px] transition-all duration-200 hover:bg-[rgba(36,53,69,0.94)] hover:border-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
           compact ? "h-9" : "h-10",
           textColor,
         )}
