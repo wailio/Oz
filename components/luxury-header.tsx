@@ -30,7 +30,8 @@ export default function LuxuryHeader() {
 
   const isTransparent = isHomePage && !isScrolled
   const textColor = isTransparent || isDarkHeaderPage ? "text-white" : "text-foreground"
-  const topBarClass = isTransparent || isDarkHeaderPage ? "bg-[#151515] text-white" : "bg-[#151515] text-white"
+  const contactTextColor = isDarkHeaderPage ? "text-white" : "text-[#151515]"
+  const topBarClass = "bg-[#151515] text-white"
   const mainBarClass = isDarkHeaderPage ? "bg-[#111111]/95 backdrop-blur-md" : "bg-white"
   const navBarClass = "bg-[#f7f4ee] text-[#151515]"
 
@@ -42,7 +43,7 @@ export default function LuxuryHeader() {
 
       <div className={`border-b border-black/5 transition-colors duration-300 ${mainBarClass}`}>
         <div className="mx-auto flex h-[90px] max-w-7xl items-center justify-between px-8">
-          <Link href="/contact" className={`group flex items-center gap-3 ${textColor}`}>
+          <Link href="/contact" className={`group flex items-center gap-3 ${contactTextColor}`}>
             <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f7f4ee] text-[#151515] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-[#061632] group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(6,22,50,0.2)]">
               <Phone className="h-5 w-5" aria-hidden="true" />
             </span>
