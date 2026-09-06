@@ -76,7 +76,7 @@ export default function CustomerReviews() {
         <div className="hidden md:block relative group">
           <div
             ref={scrollContainerRef}
-            className="flex gap-5 overflow-x-auto scroll-smooth px-0 pb-4"
+            className="flex gap-5 overflow-hidden scroll-smooth px-0"
             style={{ scrollBehavior: 'smooth' }}
           >
             {mobileReviews.map((review) => (
