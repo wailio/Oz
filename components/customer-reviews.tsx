@@ -69,25 +69,23 @@ export default function CustomerReviews() {
   }
 
   return (
-    <section dir="ltr" id="offres" className="bg-[#0A0A0A] px-4 py-12 md:bg-white md:px-6 md:py-24">
+    <section dir="ltr" id="offres" className="bg-[#0A0A0A] px-4 py-12 md:px-6 md:py-20">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="mb-4 flex h-auto items-start justify-center md:mb-8 md:h-64">
             <h2 className="pt-4 text-center font-serif text-2xl font-bold text-[#F0EDE6] md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
-            <div className="hidden w-full items-center gap-12 md:flex" aria-label="Laisser un avis Google">
-              <div className="relative flex min-w-0 flex-1 flex-col justify-center pb-8 pl-4 lg:pl-10">
-                <p className="mb-6 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#bd8b3d]">AVIS CLIENTS</p>
-                <h2 className="max-w-[520px] font-serif text-4xl font-normal leading-[1.08] text-gray-900 lg:text-5xl">
-                  Votre avis<br />compte pour nous.
-                </h2>
+            <div className="hidden w-full items-start justify-between md:flex" aria-label="Laisser un avis Google">
+              <div className="pl-4 pt-4 lg:pl-10">
+                <h2 className="font-serif text-4xl font-normal leading-tight text-[#F0EDE6] lg:text-5xl">Ce Que Disent Nos Clients</h2>
+                <div className="mt-6 h-px w-14 bg-[#F0EDE6]" />
               </div>
-              <div className="relative shrink-0 rounded-[14px] border border-[#c9964b] bg-white p-4 shadow-[0_12px_24px_rgba(90,64,25,0.1)] lg:w-[430px] lg:p-5">
-                <div className="flex items-start gap-4">
-                  <img src="/google-logo.png" alt="Google" className="h-12 w-12 object-contain" />
-                  <div className="pt-0.5"><p className="font-sans text-[10px] uppercase tracking-wide text-gray-500">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-serif text-3xl text-gray-900">Google</p></div>
+              <div className="w-[220px] rounded-[5px] border border-[#3b3325] bg-[#171717] p-4">
+                <div className="flex items-start gap-3">
+                  <img src="/google-logo.png" alt="Google" className="mt-1 h-5 w-5 object-contain" />
+                  <div><p className="font-sans text-[8px] uppercase tracking-[0.16em] text-[#807b72]">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-sans text-xl text-[#F0EDE6]">Google</p></div>
                 </div>
-                <div className="mt-5 flex gap-2 border-b border-gray-100 pb-5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-5 w-5 fill-[#c98e34] text-[#c98e34]" aria-hidden="true" />)}</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#c89543] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c89543] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
+                <div className="mt-2 flex gap-1" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="mt-4 flex h-10 items-center justify-between bg-[#b4883d] px-3 font-sans text-[9px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#956e2f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
@@ -101,23 +99,13 @@ export default function CustomerReviews() {
             className="flex gap-8 overflow-x-auto scroll-smooth pb-4"
             style={{ scrollBehavior: 'smooth' }}
           >
-            {reviews.map((review, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-80 flex flex-col items-start text-left p-6 rounded-lg bg-gray-50 border border-gray-200"
-              >
-                <img src={review.image} alt={`Avis de ${review.author}`} className="mb-4 h-auto w-full rounded-md border border-gray-200 object-contain" />
-                <div className="flex gap-1 mb-3 justify-start">
-                  {[...Array(review.rating)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  ))}
+            {mobileReviews.slice(0, 4).map((review) => (
+              <div key={review.author} className="flex h-48 w-[305px] flex-shrink-0 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left lg:w-[305px]">
+                <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>
+                  {Array.from({ length: review.rating }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}
                 </div>
-                <p className="text-gray-700 font-medium text-sm mb-3 leading-relaxed">
-                  {review.text}
-                </p>
-                <p className="text-gray-900 font-semibold text-sm">{review.author}</p>
-                <p className="text-gray-500 text-xs">{review.role}</p>
-                <p className="text-gray-500 text-xs">{review.years}</p>
+                <p className="font-sans text-sm leading-6 text-[#d0d0d0]">&quot;{review.text}&quot;</p>
+                <p className="mt-auto font-sans text-sm font-bold text-[#F0EDE6]">{review.author}</p>
               </div>
             ))}
           </div>
