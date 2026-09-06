@@ -227,7 +227,7 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-white md:bg-gray-50 rounded-none md:rounded-lg border border-gray-200 overflow-hidden hover:border-[#d4af5f] hover:-translate-y-1.5 hover:shadow-[0_32px_60px_rgba(0,0,0,0.65),0_0_24px_rgba(212,175,95,0.18),0_0_0_1px_rgba(212,175,95,0.2)] transition-[transform,box-shadow,border-color] duration-[350ms] ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer flex flex-col shadow-[0_24px_48px_rgba(0,0,0,0.55),0_0_0_1px_rgba(212,175,95,0.12)]">
+      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-white md:bg-gray-50 rounded-none md:rounded-lg border border-gray-200 overflow-hidden hover:border-[#8b7344] hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
           <div className="relative aspect-square w-full items-center justify-center overflow-hidden bg-white rounded-none md:rounded-t-lg md:aspect-[4/3]">
             {product.discount && <div className="absolute top-1.5 left-1.5 bg-red-600 text-white px-1.5 py-0.5 rounded text-[10px] font-bold z-10">-{product.discount}%</div>}
             <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
@@ -320,23 +320,18 @@ export default function Products() {
     .sort((a, b) => (a.id === 6 ? -1 : b.id === 6 ? 1 : 0))
 
   return (
-    <section dir="ltr" className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ background: "radial-gradient(ellipse 120% 80% at 15% 10%, #2a2015 0%, #171009 45%, #0d0906 100%)" }}>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 opacity-[0.04] mix-blend-overlay"
-        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E\")" }}
-      />
+    <section dir="ltr" className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
       <img
         src="/products-gold-blob.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-45 mix-blend-soft-light md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
+        className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
       />
       <div className="relative z-10 mx-auto max-w-7xl px-3 md:px-6">
         {/* NOS PRODUITS Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#d4af5f] md:text-[42px]">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -345,7 +340,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(212,175,95,0.4)] bg-[rgba(20,15,10,0.4)] text-[#d4af5f] shadow-sm transition hover:bg-[rgba(212,175,95,0.15)] md:left-2 md:flex md:h-10 md:w-10"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -353,7 +348,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(212,175,95,0.4)] bg-[rgba(20,15,10,0.4)] text-[#d4af5f] shadow-sm transition hover:bg-[rgba(212,175,95,0.15)] md:right-2 md:flex md:h-10 md:w-10"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -380,7 +375,7 @@ export default function Products() {
         {/* Modèles Pr��ts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#d4af5f] md:text-[42px]">Modèles prêts</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -389,7 +384,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(212,175,95,0.4)] bg-[rgba(20,15,10,0.4)] text-[#d4af5f] shadow-sm transition hover:bg-[rgba(212,175,95,0.15)] md:left-2 md:flex md:h-10 md:w-10"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -397,7 +392,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[rgba(212,175,95,0.4)] bg-[rgba(20,15,10,0.4)] text-[#d4af5f] shadow-sm transition hover:bg-[rgba(212,175,95,0.15)] md:right-2 md:flex md:h-10 md:w-10"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
