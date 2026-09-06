@@ -94,7 +94,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('left')}
             aria-label="Avis précédents"
-            className="absolute left-0 top-1/2 z-10 -translate-x-3/4 -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
+            className="absolute left-0 top-1/2 z-10 -translate-x-full -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -105,7 +105,7 @@ export default function CustomerReviews() {
           <button
             onClick={() => scroll('right')}
             aria-label="Avis suivants"
-            className="absolute right-0 top-1/2 z-10 translate-x-3/4 -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
+            className="absolute right-0 top-1/2 z-10 translate-x-full -translate-y-1/2 bg-[#F0EDE6] p-3 text-[#171717] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
