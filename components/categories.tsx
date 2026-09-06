@@ -21,18 +21,18 @@ export default function Categories() {
               <span aria-hidden="true">•</span>
               <span>NOS COLLECTIONS</span>
             </div>
-            <h2 className="font-serif text-3xl font-normal text-[#1A1A1A] md:text-4xl">Explorer les Catégories</h2>
+            <h2 className="hidden font-serif text-3xl font-normal text-[#1A1A1A] md:block md:text-4xl">Explorer les Catégories</h2>
           </Reveal>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-8 md:gap-x-12 lg:gap-x-16">
+        <div className="-mx-6 flex snap-x snap-mandatory justify-start gap-4 overflow-x-auto px-6 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:flex-wrap md:justify-center md:gap-x-12 md:gap-y-8 md:overflow-visible md:px-0 md:pb-0 lg:gap-x-16">
           {categories.map((cat, idx) => (
             <Reveal key={cat.label} variant="pop" delay={idx * 80}>
-              <Link href={cat.href} className="group flex w-32 flex-col items-center gap-3 text-center md:w-36">
-                <span className="relative block aspect-square w-32 overflow-hidden rounded-full transition-all duration-[250ms] ease-out group-hover:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_#000000] group-focus-visible:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_#000000] md:w-36">
+              <Link href={cat.href} className="group flex w-20 shrink-0 snap-start flex-col items-center gap-2 text-center md:w-36">
+                <span className="relative block aspect-square w-20 overflow-hidden rounded-full transition-all duration-[250ms] ease-out group-hover:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_#000000] group-focus-visible:shadow-[0_0_0_3px_#ffffff,0_0_0_6px_#000000] md:w-36">
                   <img src={cat.image} alt="" className="h-full w-full object-cover transition-transform duration-[250ms] ease-out group-hover:scale-[1.08] group-focus-visible:scale-[1.08]" />
                 </span>
-                <span className="text-sm font-medium text-[#333333] transition-[font-weight] duration-200 group-hover:font-semibold">{cat.label}</span>
+                <span className="text-xs font-medium text-[#333333] transition-[font-weight] duration-200 group-hover:font-semibold md:text-sm">{cat.label}</span>
               </Link>
             </Reveal>
           ))}
