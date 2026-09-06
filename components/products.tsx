@@ -227,25 +227,23 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-white md:bg-gray-50 rounded-none md:rounded-lg border border-gray-200 overflow-hidden hover:border-[#8b7344] hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
-          <div className="relative aspect-square w-full items-center justify-center overflow-hidden bg-white rounded-none md:rounded-t-lg md:aspect-[4/3]">
-            {product.discount && <div className="absolute top-1.5 left-1.5 bg-red-600 text-white px-1.5 py-0.5 rounded text-[10px] font-bold z-10">-{product.discount}%</div>}
-            <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
-            <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} className="absolute top-1.5 right-1.5 bg-white rounded-full p-1.5 hover:bg-gray-100 transition-colors">
-              <Heart className={`w-3 h-3 ${favorites.includes(product.id) ? "fill-red-600 text-red-600" : "text-gray-600"}`} />
+      <div className="group flex-shrink-0 w-40 md:w-[350px] bg-[#1A1A1A] rounded-none overflow-hidden transition-colors duration-300 cursor-pointer flex flex-col">
+          <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
+            {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
+            <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
+            <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
+              <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
             </button>
           </div>
-          <div className="p-1.5 md:p-2 flex-1 flex flex-col justify-between">
+          <div className="flex flex-1 flex-col justify-between bg-[#1A1A1A] p-4 md:p-5">
             <div>
-              <p className="text-[8px] md:text-[9px] text-gray-600 mb-0.5">IdealInstitute</p>
-              <h3 className="text-[9px] md:text-xs font-bold text-gray-900 line-clamp-2">{product.name}</h3>
-              <p className="hidden md:block md:line-clamp-2 md:text-[11px] md:leading-4 md:text-gray-500 md:mt-1">{product.description}</p>
+              <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
+              <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
+              <p className="mt-2 line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:text-xs">{product.description}</p>
             </div>
-            <div className="pt-1.5 border-t border-gray-200 mt-1.5">
-              <div className="flex justify-between items-center gap-1">
-                <span className="text-[8px] md:text-xs font-bold text-[#1E1912]">{product.price}</span>
-                {product.originalPrice && <span className="text-[7px] md:text-[8px] text-gray-400 line-through">{product.originalPrice}</span>}
-              </div>
+            <div className="mt-5 flex items-center gap-3">
+              <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
+              {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
             </div>
           </div>
         </div>
@@ -320,18 +318,13 @@ export default function Products() {
     .sort((a, b) => (a.id === 6 ? -1 : b.id === 6 ? 1 : 0))
 
   return (
-    <section dir="ltr" className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
-      <img
-        src="/products-gold-blob.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
-      />
+    <section dir="ltr" className="relative overflow-hidden bg-[#0A0A0A] py-8 md:py-16 lg:py-24" id="products">
+
       <div className="relative z-10 mx-auto max-w-7xl px-3 md:px-6">
         {/* NOS PRODUITS Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#F0EDE6] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -340,7 +333,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute left-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:h-9 md:w-9"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -348,7 +341,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute right-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-0 md:h-9 md:w-9"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -375,7 +368,7 @@ export default function Products() {
         {/* Modèles Pr��ts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#F0EDE6] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -384,7 +377,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:left-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute left-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:h-9 md:w-9"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -392,7 +385,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#8a6a32] bg-[#8a6a32]/90 text-[#fff8e8] shadow-sm transition hover:bg-[#6f5225] md:right-2 md:flex md:h-10 md:w-10 md:bg-white/95 md:text-gray-900 md:shadow-md md:hover:bg-gray-900 md:hover:text-white"
+              className="absolute right-1 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-0 md:h-9 md:w-9"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -420,7 +413,7 @@ export default function Products() {
         <Reveal delay={200}>
           <div className="mt-8 md:mt-12 flex justify-center">
             <Link href="/all-products">
-              <button className="border-2 border-gray-900 text-gray-900 px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
               SHOW ALL PRODUCTS
               </button>
             </Link>

@@ -16,7 +16,7 @@ export default function InstagramSection() {
   }, [])
 
   return (
-    <section className="bg-black text-white py-12 md:py-16 px-4 md:px-6">
+    <section className="bg-white text-black py-12 md:py-16 px-4 md:px-6">
       <Reveal>
       <div className="max-w-7xl mx-auto">
         {/* Title */}
@@ -28,7 +28,7 @@ export default function InstagramSection() {
                 href="https://www.instagram.com/oz.meuble" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity text-[#a98661]"
+                className="text-black transition-opacity hover:opacity-70"
               >
                 @oz.meuble
               </Link>
@@ -47,7 +47,7 @@ export default function InstagramSection() {
             href="https://www.instagram.com/oz.meuble"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border-2 border-[#a98661] text-white px-8 py-3 font-serif uppercase text-sm tracking-widest hover:bg-[#a98661] hover:text-white transition-all duration-300"
+            className="inline-block border-2 border-black text-black px-8 py-3 font-serif uppercase text-sm tracking-widest hover:bg-black hover:text-white transition-all duration-300"
           >
             Nous Suivre
           </Link>
