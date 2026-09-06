@@ -52,7 +52,7 @@ export default function CustomerReviews() {
     <section dir="ltr" id="offres" className="bg-[#0A0A0A] px-4 py-12 md:px-6 md:py-20">
       <div className="max-w-7xl mx-auto">
         <Reveal>
-          <div className="mb-4 flex h-auto items-start justify-center md:mb-8 md:h-64">
+          <div className="mb-4 flex h-auto items-start justify-center md:mb-8 md:h-56">
             <h2 className="pt-4 text-center font-serif text-2xl font-bold text-[#F0EDE6] md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
             <div className="hidden w-full items-start justify-between md:flex" aria-label="Laisser un avis Google">
               <div className="pl-4 pt-4 lg:pl-10">
