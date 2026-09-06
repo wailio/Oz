@@ -79,11 +79,13 @@ export default function CustomerReviews() {
                 <h2 className="font-serif text-4xl font-normal leading-tight text-[#F0EDE6] lg:text-5xl">Ce Que Disent Nos Clients</h2>
                 <div className="mt-6 h-px w-14 bg-[#F0EDE6]" />
               </div>
-              <div className="flex w-[360px] items-center gap-4 rounded-[5px] border border-[#3b3325] bg-[#171717] px-4 py-3">
-                <img src="/google-logo.png" alt="Google" className="h-5 w-5 shrink-0 object-contain" />
-                <div className="shrink-0"><p className="font-sans text-[8px] uppercase tracking-[0.16em] text-[#807b72]">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-sans text-xl leading-5 text-[#F0EDE6]">Google</p></div>
-                <div className="flex shrink-0 gap-0.5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="ml-auto flex h-10 items-center gap-6 bg-[#b4883d] px-4 font-sans text-[9px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#956e2f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-xl font-normal" aria-hidden="true">→</span></a>
+              <div className="flex w-[220px] flex-col gap-2 rounded-[5px] border border-[#3b3325] bg-[#171717] px-4 py-3">
+                <div className="flex items-start gap-3">
+                  <img src="/google-logo.png" alt="Google" className="mt-1 h-5 w-5 shrink-0 object-contain" />
+                  <div className="min-w-0 flex-1"><p className="font-sans text-[8px] uppercase tracking-[0.16em] text-[#807b72]">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-sans text-xl leading-5 text-[#F0EDE6]">Google</p></div>
+                </div>
+                <div className="flex gap-0.5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="flex h-10 w-full items-center justify-between bg-[#b4883d] px-3 font-sans text-[9px] font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#956e2f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b4883d] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
