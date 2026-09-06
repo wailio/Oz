@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${_manrope.variable} ${_montserrat.variable} ${_playfair.variable} ${_greatVibes.variable} ${_cormorant.variable} ${_notoArabic.variable} ${_amiri.variable} bg-background`}>
-      <body className={`font-sans antialiased md:pt-[186px]`}>
+      <body className="font-sans antialiased">
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
