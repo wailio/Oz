@@ -1,71 +1,186 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Star } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 
 const reviews = [
-  { text: 'Très bien reçu 10/10 merci mon fils', author: 'redouane naoui', rating: 5 },
-  { text: "J'ai bien reçu ma commande merci de votre professionnalisme", author: 'Omar Merfoud', rating: 5 },
-  { text: 'Très bien reçu merci', author: 'Naoui Lila', rating: 5 },
-  { text: 'Merci pour votre sérieux', author: 'Islam Abriche', rating: 5 },
-  { text: 'Les pro bravo Oz', author: 'Kouider Khadidja', rating: 5 },
-  { text: '10/10', author: 'Isseri Nassereddine', rating: 5 },
-  { text: '10/10', author: 'Rania Dirar', rating: 5 },
-  { text: 'Meilleur site', author: 'Khalouf Aziz', rating: 4 },
-  { text: 'Vous avez un livreur très charmant', author: 'Moncef djelloul Djafer cherif', rating: 5 },
+  { image: "/review-rahim.png", author: "Rahim Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "Soyez les bienvenus" },
+  { image: "/review-mehdi.png", author: "Mehdi", role: "", rating: 5, years: "il y a 3 mois", text: "" },
+  { image: "/review-zakaria.png", author: "ZAKARIA BENAMARA", role: "1 avis · 1 photo", rating: 2, years: "il y a 8 mois", text: "Bon produit" },
+  { image: "/review-illyes.png", author: "Illyes Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "" },
 ]
 
-function Stars({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-1" aria-label={`${rating} étoiles sur 5`}>
-      {Array.from({ length: 5 }, (_, index) => (
-        <Star key={index} className={`h-4 w-4 ${index < rating ? 'fill-[#a8823f] text-[#a8823f]' : 'text-[#4b4b4b]'}`} aria-hidden="true" />
-      ))}
-    </div>
-  )
-}
-
 export default function CustomerReviews() {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const scroll = (direction: 'left' | 'right') => {
-    scrollContainerRef.current?.scrollBy({ left: direction === 'right' ? 330 : -330, behavior: 'smooth' })
+  const hasAutoScrolled = useRef(false)
+
+  useEffect(() => {
+    const element = scrollContainerRef.current
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    if (!element || isMobile) return
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
+      hasAutoScrolled.current = true
+      window.setTimeout(() => element.scrollBy({ left: 350, behavior: "smooth" }), 250)
+      observer.disconnect()
+    }, { threshold: 0.35 })
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (!isMobile || prefersReducedMotion) return
+
+    const interval = window.setInterval(() => {
+      setCurrentIndex((previous) => (previous + 1) % reviews.length)
+    }, 2000)
+
+    return () => window.clearInterval(interval)
+  }, [])
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 350
+      if (direction === 'left') {
+        scrollContainerRef.current.scrollLeft -= scrollAmount
+      } else {
+        scrollContainerRef.current.scrollLeft += scrollAmount
+      }
+    }
   }
 
   return (
-    <section dir="ltr" id="offres" className="bg-[#0A0A0A] px-4 py-14 text-white md:px-6 md:py-20">
-      <div className="mx-auto max-w-7xl">
+    <section dir="ltr" id="offres" className="py-12 md:py-24 px-4 md:px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
         <Reveal>
-          <div className="mb-10 flex flex-col gap-8 md:mb-14 md:flex-row md:items-center md:justify-between">
-            <div className="shrink-0">
-              <h2 className="font-serif text-3xl font-normal leading-tight text-[#F0EDE6] md:text-5xl">Ce Que Disent Nos Clients</h2>
-              <div className="mt-5 h-px w-14 bg-[#F0EDE6]" />
-            </div>
-            <div className="flex min-w-0 flex-1 items-center justify-end">
-              <div className="flex w-full items-center gap-4 rounded-[5px] border border-[rgba(212,175,95,0.2)] bg-[#161616] px-4 py-3 md:w-auto md:min-w-[510px] md:gap-5">
-                <img src="/google-logo.png" alt="Google" className="h-5 w-5 shrink-0 object-contain" />
-                <div className="shrink-0 leading-none"><p className="text-[8px] uppercase tracking-[0.12em] text-[#777]">LAISSEZ-NOUS UN AVIS SUR</p><p className="mt-1 text-xl text-[#F0EDE6]">Google</p></div>
-                <Stars rating={5} />
-                <a href="https://www.google.com/maps/search/?api=1&query=Oz+meuble+Birkhadem" target="_blank" rel="noopener noreferrer" className="ml-auto flex shrink-0 items-center gap-2 bg-[#a8823f] px-[18px] py-[10px] text-[9px] font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:bg-[#c19a55]">DONNER MON AVIS <span className="text-base" aria-hidden="true">→</span></a>
+          <div className="mb-4 flex h-auto items-start justify-center md:mb-8 md:h-64">
+            <h2 className="pt-4 text-center text-2xl font-serif font-bold text-gray-900 md:hidden md:pt-8 md:text-4xl">AVIS CLIENTS</h2>
+            <div className="hidden w-full items-center gap-12 md:flex" aria-label="Laisser un avis Google">
+              <div className="relative flex min-w-0 flex-1 flex-col justify-center pb-8 pl-4 lg:pl-10">
+                <p className="mb-6 font-sans text-xs font-medium uppercase tracking-[0.32em] text-[#bd8b3d]">AVIS CLIENTS</p>
+                <h2 className="max-w-[520px] font-serif text-4xl font-normal leading-[1.08] text-gray-900 lg:text-5xl">
+                  Votre avis<br />compte pour nous.
+                </h2>
+              </div>
+              <div className="relative shrink-0 rounded-[14px] border border-[#c9964b] bg-white p-4 shadow-[0_12px_24px_rgba(90,64,25,0.1)] lg:w-[430px] lg:p-5">
+                <div className="flex items-start gap-4">
+                  <img src="/google-logo.png" alt="Google" className="h-12 w-12 object-contain" />
+                  <div className="pt-0.5"><p className="font-sans text-[10px] uppercase tracking-wide text-gray-500">LAISSEZ-NOUS UN AVIS SUR</p><p className="font-serif text-3xl text-gray-900">Google</p></div>
+                </div>
+                <div className="mt-5 flex gap-2 border-b border-gray-100 pb-5" aria-label="5 étoiles">{Array.from({ length: 5 }, (_, index) => <Star key={index} className="h-5 w-5 fill-[#c98e34] text-[#c98e34]" aria-hidden="true" />)}</div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mobenia+Meuble" target="_blank" rel="noopener noreferrer" className="mt-2 flex h-8 items-center justify-between rounded-md bg-[#c89543] px-3 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.12em] text-white shadow-sm transition-colors hover:bg-[#ad7930] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c89543] focus-visible:ring-offset-2"><span>DONNER MON AVIS</span><span className="text-2xl font-normal" aria-hidden="true">→</span></a>
               </div>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="flex items-center gap-3 md:gap-4">
-            <button onClick={() => scroll('left')} aria-label="Avis précédents" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-white"><span aria-hidden="true">‹</span></button>
-            <div ref={scrollContainerRef} className="flex min-w-0 snap-x gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {reviews.map((review) => (
-                <article key={review.author} className="flex min-h-[192px] w-[280px] flex-shrink-0 snap-start flex-col border border-[rgba(255,255,255,0.08)] bg-[#141414] p-6 md:w-[calc((100%-60px)/4)]">
-                  <Stars rating={review.rating} />
-                  <p className="mt-5 text-sm leading-6 text-[#B0B0B0]">&quot;{review.text}&quot;</p>
-                  <p className="mt-auto pt-6 text-sm font-bold text-[#F0EDE6]">{review.author}</p>
-                </article>
+        {/* Desktop - Horizontal Scroll with Mouse Hover Controls */}
+        <div className="hidden md:block relative group">
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-8 overflow-x-auto scroll-smooth pb-4"
+            style={{ scrollBehavior: 'smooth' }}
+          >
+            {reviews.map((review, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-80 flex flex-col items-start text-left p-6 rounded-lg bg-gray-50 border border-gray-200"
+              >
+                <img src={review.image} alt={`Avis de ${review.author}`} className="mb-4 h-auto w-full rounded-md border border-gray-200 object-contain" />
+                <div className="flex gap-1 mb-3 justify-start">
+                  {[...Array(review.rating)].map((_, j) => (
+                    <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 font-medium text-sm mb-3 leading-relaxed">
+                  {review.text}
+                </p>
+                <p className="text-gray-900 font-semibold text-sm">{review.author}</p>
+                <p className="text-gray-500 text-xs">{review.role}</p>
+                <p className="text-gray-500 text-xs">{review.years}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Hover Controls - Left */}
+          <button
+            onClick={() => scroll('left')}
+            aria-label="Avis précédents"
+            className="absolute left-0 top-1/2 z-10 -translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Hover Controls - Right */}
+          <button
+            onClick={() => scroll('right')}
+            aria-label="Avis suivants"
+            className="absolute right-0 top-1/2 z-10 translate-x-16 -translate-y-1/2 rounded-full bg-[#8b6508] p-3 text-white opacity-0 transition-opacity duration-300 hover:bg-[#654806] focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b6508] focus-visible:ring-offset-2 group-hover:opacity-100"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile - Carousel */}
+        <div className="md:hidden">
+          <div className="flex h-[430px] flex-col items-start overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 text-left mb-6">
+            <div className="flex h-48 w-full flex-none items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-white">
+              <img src={reviews[currentIndex].image} alt={`Avis de ${reviews[currentIndex].author}`} className="h-full w-full object-contain" />
+            </div>
+            <div className="flex gap-1 mb-3 justify-start">
+              {[...Array(reviews[currentIndex].rating)].map((_, j) => (
+                <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <button onClick={() => scroll('right')} aria-label="Avis suivants" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-white"><span aria-hidden="true">›</span></button>
+            <p className="text-xs font-semibold text-gray-900 text-left">{reviews[currentIndex].author}</p>
+            <p className="text-gray-500 text-xs mb-2">{reviews[currentIndex].role}</p>
+            <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+              {reviews[currentIndex].text}
+            </p>
+            <p className="text-gray-500 text-xs">{reviews[currentIndex].years}</p>
           </div>
+
+          <div className="flex justify-between items-center gap-3">
+            <button
+              onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
+              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <div className="flex gap-2 flex-1 justify-center">
+              {reviews.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    i === currentIndex ? "bg-[#a98661]" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
+              className="p-2 rounded-lg bg-[#a98661] hover:bg-[#061632] transition-colors flex-shrink-0"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
         </Reveal>
       </div>
     </section>
