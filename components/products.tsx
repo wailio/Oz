@@ -227,7 +227,7 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex-shrink-0 w-56 md:w-[350px] bg-[#1A1A1A] rounded-none overflow-hidden transition-colors duration-300 cursor-pointer flex flex-col">
+      <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
           <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
             <img src={product.images[0] || "/placeholder.svg"} alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
