@@ -38,7 +38,7 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="/logo-oz-meuble-luxury.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%206%20sept.%202026%2C%2014_10_22-ucFMD3WoFMtvfk7sdSc5FVXGfVMNaN.png"
               alt="Oz meuble"
               width={150}
               height={54}
