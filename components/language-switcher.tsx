@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { ChevronDown, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/components/language-provider"
 
@@ -15,7 +16,7 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
   const [isOpen, setIsOpen] = useState(false)
   const switcherRef = useRef<HTMLDivElement>(null)
   const activeLanguage = languages.find((language) => language.id === locale) ?? languages[0]
-  const otherLanguages = languages.filter((language) => language.id !== activeLanguage.id)
+  const dropdownLanguages = languages
 
   useEffect(() => {
     if (!isOpen) return
@@ -35,23 +36,25 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
         aria-label={`Langue active : ${activeLanguage.label}`}
         onClick={() => setIsOpen((open) => !open)}
         className={cn(
-          "flex items-center justify-center rounded-full border border-[#d4af5f]/40 bg-transparent transition-all duration-200 hover:border-[#d4af5f] hover:bg-[#d4af5f]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
-          compact ? "size-8" : "size-10",
+          "flex items-center gap-2 rounded-full border border-white/15 bg-[#141414]/80 px-3 py-1.5 text-xs font-semibold tracking-[0.08em] text-white backdrop-blur-sm transition-all duration-200 hover:border-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]",
+          compact ? "h-9" : "h-10",
           textColor,
         )}
       >
-        <Image src={activeLanguage.icon} alt="" width={48} height={48} className={cn("rounded-full object-cover", compact ? "size-6" : "size-8")} />
+        <Image src={activeLanguage.icon} alt="" width={20} height={14} className="h-3.5 w-5 rounded-[2px] object-cover" />
+        <span>{activeLanguage.id.toUpperCase()}</span>
+        <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-200", isOpen && "rotate-180")} aria-hidden="true" />
       </button>
 
       <div
         role="menu"
         aria-hidden={!isOpen}
         className={cn(
-          "absolute right-0 top-full z-50 mt-2 rounded-xl border border-[#d4af5f]/35 bg-[#151515] p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition-all duration-200 ease-out",
+          "absolute right-0 top-full z-50 mt-2 min-w-44 rounded-[10px] border border-white/10 bg-[#1A1A1A] p-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-200 ease-out",
           isOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-1.5 opacity-0",
         )}
       >
-        {otherLanguages.map((language) => (
+        {dropdownLanguages.map((language) => (
           <button
             key={language.id}
             type="button"
@@ -62,9 +65,11 @@ export function LanguageSwitcher({ textColor = "text-white", compact = false }: 
               setLocale(language.id)
               setIsOpen(false)
             }}
-            className="flex size-8 items-center justify-center rounded-full border border-transparent transition-colors hover:border-[#d4af5f]/60 hover:bg-[#d4af5f]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]"
+            className="flex w-full items-center gap-3 rounded-md px-2.5 py-2 text-left text-sm text-white transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d7b66a]"
           >
-            <Image src={language.icon} alt="" width={48} height={48} className="size-6 rounded-full object-cover" />
+            <Image src={language.icon} alt="" width={20} height={14} className="h-3.5 w-5 rounded-[2px] object-cover" />
+            <span className="flex-1 whitespace-nowrap">{language.label}</span>
+            {language.id === activeLanguage.id && <Check className="h-4 w-4 text-[#d4af5f]" aria-hidden="true" />}
           </button>
         ))}
       </div>
