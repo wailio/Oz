@@ -67,7 +67,7 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={360}>
               <Link href="/contact" className="mt-5 inline-block md:mt-7">
-                <Button className="min-h-11 rounded-[2px] border-4 border-[#1a2942] bg-[rgba(245,242,234,0.95)] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#0A0A0A] shadow-none transition-colors duration-250 ease-out hover:bg-[#1a2942] hover:text-[#f5f2ea] focus-visible:bg-[#1a2942] focus-visible:text-[#f5f2ea] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
+                <Button className="min-h-11 rounded-[2px] border-4 border-[#1a2942] bg-[#1a2942] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#f5f2ea] shadow-none transition-colors duration-250 ease-out hover:bg-[#c9a24b] hover:text-[#0A0A0A] focus-visible:bg-[#c9a24b] focus-visible:text-[#0A0A0A] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
                   Nous contacter
                 </Button>
               </Link>
