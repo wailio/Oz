@@ -26,25 +26,6 @@ const mobileReviews = [
 export default function CustomerReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const hasAutoScrolled = useRef(false)
-
-  useEffect(() => {
-    const element = scrollContainerRef.current
-    const isMobile = window.matchMedia("(max-width: 767px)").matches
-    if (!element || isMobile) return
-
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
-      hasAutoScrolled.current = true
-      window.setTimeout(() => element.scrollBy({ left: 350, behavior: "smooth" }), 250)
-      observer.disconnect()
-    }, { threshold: 0.35 })
-
-    observer.observe(element)
-    return () => observer.disconnect()
-  }, [])
-
   useEffect(() => {
     const isMobile = window.matchMedia("(max-width: 767px)").matches
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -58,14 +39,13 @@ export default function CustomerReviews() {
   }, [])
 
   const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 350
-      if (direction === 'left') {
-        scrollContainerRef.current.scrollLeft -= scrollAmount
-      } else {
-        scrollContainerRef.current.scrollLeft += scrollAmount
-      }
-    }
+    const container = scrollContainerRef.current
+    const card = container?.firstElementChild
+    if (!container || !(card instanceof HTMLElement)) return
+
+    const gap = Number.parseFloat(getComputedStyle(container).columnGap) || 0
+    const scrollAmount = card.getBoundingClientRect().width + gap
+    container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' })
   }
 
   return (
@@ -99,8 +79,8 @@ export default function CustomerReviews() {
             className="flex gap-5 overflow-x-auto scroll-smooth px-0 pb-4"
             style={{ scrollBehavior: 'smooth' }}
           >
-            {mobileReviews.slice(0, 4).map((review) => (
-              <div key={review.author} className="flex h-48 min-w-0 flex-1 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left">
+            {mobileReviews.map((review) => (
+              <div key={review.author} className="flex h-48 w-[calc((100%-3.75rem)/4)] shrink-0 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left">
                 <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>
                   {Array.from({ length: review.rating }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}
                 </div>
