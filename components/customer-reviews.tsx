@@ -80,7 +80,7 @@ export default function CustomerReviews() {
             style={{ scrollBehavior: 'smooth' }}
           >
             {mobileReviews.map((review) => (
-              <div key={review.author} className="flex h-48 w-[calc((100%-3.75rem)/4)] shrink-0 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left">
+              <div key={review.author} className="flex h-52 w-[calc((100%-3.75rem)/4)] shrink-0 flex-col items-start border border-[#292929] bg-[#151515] px-6 py-6 text-left">
                 <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>
                   {Array.from({ length: review.rating }, (_, index) => <Star key={index} className="h-4 w-4 fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}
                 </div>
